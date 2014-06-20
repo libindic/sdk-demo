@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fortune="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/HeaderTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fortune_header_fortune_textview_sample_1" />
+
+    <org.silpa.fortune.FortuneTextView
+        android:id="@+id/tvFortune1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fortune:fortuneTimeInterval="4000"
+        fortune:fortuneSearchPattern="happy"
+        fortune:fortuneQuoteSet="chanakya" />
+
+    <TextView
+        style="@style/HeaderTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fortune_header_fortune_textview_sample_2" />
+
+    <org.silpa.fortune.FortuneTextView
+        android:id="@+id/tvFortune2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fortune:fortuneTimeInterval="2000"
+        fortune:fortuneQuoteSet="malayalam_proverbs" />
+
+    <TextView
+        style="@style/HeaderTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fortune_header_fortune_textview_sample_3" />
+
+    <org.silpa.fortune.FortuneTextView
+        android:id="@+id/tvFortune3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fortune:fortuneTimeInterval="4000"
+        fortune:fortuneQuoteSet="thirukkural" />
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:payyans="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:payyans="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payyans_header_payyans_edittext" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payyans_label_enter_text" />
+
+        <org.silpa.payyans.PayyansEditText
+            android:id="@+id/edtPayyansInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            payyans:payyansDirectionOfConversion="ASCIIToUnicode"
+            payyans:payyansFontMap="ambili"
+            payyans:payyansOutputTo="@+id/tvPayyansOutput" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payyans_converted_text" />
+
+        <TextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvPayyansOutput"
+            android:layout_width="fill_parent" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payyans_header_general" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payyans_label_enter_text" />
+
+        <org.silpa.payyans.PayyansEditText
+            android:id="@+id/edtPayyansInput1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerFontMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerDirection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btConvert"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payyans_convert_text" />
+
+        <TextView
+            style="@style/RegularTextView"
+            android:gravity="center"
+            android:id="@+id/tvPayyansOutput1"
+            android:layout_width="fill_parent" />
+
+        <org.silpa.payyans.PayyansTextView
+            android:id="@+id/tvPayyans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            payyans:payyansDirectionOfConversion="ASCIIToUnicode"
+            payyans:payyansFontMap="manorama" />
+
+    </LinearLayout>
+
+</ScrollView>
