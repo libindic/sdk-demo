@@ -4,7 +4,10 @@ package org.silpa.sdk.demo;
  * Created by sujith on 18/5/14.
  */
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -26,8 +29,22 @@ public class MainActivity extends Activity {
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
 
+    private static final int SOUNDEX = 0;
+    private static final int PAYYANS = 1;
+    private static final int TRANSLITERATOR = 2;
+    private static final int SPELL_CHECKER = 3;
+    private static final int FORTUNE = 4;
+    private static final int HYPENATOR = 5;
+    private static final int UCA_SORT = 6;
+    private static final int GUESS_LANGUAGE = 7;
+    private static final int STEMMER = 8;
+    private static final int SYLLABIFIER = 9;
+    private static final int KATAPAYADI = 10;
+    private static final int CHARACTER_DETAILS = 11;
+
     private static String LOG_TAG = "Main Activity";
 
+    @SuppressLint("AppCompatMethod")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,12 +124,36 @@ public class MainActivity extends Activity {
     private void selectItem(int position) {
 
         // change fragments here
+        Fragment fragment = null;
+        if (position == SOUNDEX) {
+            fragment = new SoundexFragment();
+        } else if (position == PAYYANS) {
+            fragment = new PayyansFragment();
+        } else if (position == FORTUNE) {
+            fragment = new FortuneFragment();
+        } else if (position == STEMMER) {
+            fragment = new StemmerFragment();
+        } else if (position == SYLLABIFIER) {
+            fragment = new SyllabifierFragment();
+        } else if (position == KATAPAYADI) {
+            fragment = new KatapayadiFragment();
+        } else if (position == CHARACTER_DETAILS) {
+            fragment = new CharacterDetailsFragment();
+        }
+
+        if (fragment != null) {
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frame, fragment)
+                    .commit();
+        }
 
         mDrawerList.setItemChecked(position, true);
         setTitle(mModuleTitles[position]);
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 
+    @SuppressLint("AppCompatMethod")
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;

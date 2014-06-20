@@ -5,4 +5,26 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="HeaderTextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/header_text_size</item>
+        <item name="android:padding">@dimen/label_padding</item>
+    </style>
+
+    <style name="LabelTextView">
+        <item name="android:textSize">@dimen/label_text_size</item>
+        <item name="android:padding">@dimen/label_padding</item>
+    </style>
+
+    <style name="RegularTextView">
+        <item name="android:layout_height">@dimen/regular_text_view_size</item>
+        <item name="android:textSize">@dimen/regular_text_size</item>
+    </style>
+
+    <style name="RegularButton">
+        <item name="android:layout_height">@dimen/regular_button_size</item>
+    </style>
+
+
+
 </resources>

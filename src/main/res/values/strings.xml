@@ -11,11 +11,48 @@
         <item>UCA Sort</item>
         <item>Guess Language</item>
         <item>Stemmer</item>
-        <item>Syllabalizer</item>
+        <item>Syllabifier</item>
         <item>Katapayadi</item>
         <item>Character Details</item>
     </string-array>
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>
+
+    <string name="character_details_header_chardetails_edittext">Character Details EditText</string>
+    <string name="character_details_header_chardetails_textview">Character Details TextView - sample </string>
+    <string name="character_details_textview_sample">$V.#ऐকਕઔଓஒகఖಕഌ௧৪</string>
+    <string name="character_details_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
+
+    <string name="fortune_header_fortune_textview_sample_1">Fortune TextView - sample 1</string>
+    <string name="fortune_header_fortune_textview_sample_2">Fortune TextView - sample 2</string>
+    <string name="fortune_header_fortune_textview_sample_3">Fortune TextView - sample 3</string>
+
+    <string name="katapayadi_header_katapayadi_edittext">Katapayadi EditText</string>
+    <string name="katapayadi_header_katapayadi_textview">Katapayadi TextView - sample</string>
+    <string name="katapayadi_katapayadi_number">Katapayadi number : </string>
+    <string name="katapayadi_textview_sample">ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല</string>
+
+    <string name="payyans_header_payyans_edittext">Payyans edittext using XML</string>
+    <string name="payyans_header_general">Payyans general conversion</string>
+    <string name="payyans_label_enter_text">Enter text to convert</string>
+    <string name="payyans_converted_text">Converted Text</string>
+    <string name="payyans_convert_text">Convert</string>
+
+    <string name="soundex_header_soundex_edittext">Soundex edittext</string>
+    <string name="soundex_header_soundex_textview">Soundex textview - sample</string>
+    <string name="soundex_soundex_code_1">Soundex Code 1 :  </string>
+    <string name="soundex_soundex_code_2">Soundex Code 2 :  </string>
+    <string name="soundex_button_compare">Soundex compare</string>
+    <string name="soundex_textview_sample">ಬೆಂಗಳೂರು</string>
+
+    <string name="stemmer_header_stemmer_edittext">Stemmer EditText</string>
+    <string name="stemmer_header_stemmer_textview">Stemmer TextView - sample</string>
+    <string name="stemmer_textview_sample">ഇടുക്കി മഴ കുറഞ്ഞ പശ്ചാത്തലത്തില്‍ ഇടുക്കി അണക്കെട്ട് മൂന്ന് ദിവസത്തേക്ക് തുറക്കേണ്ട</string>
+    <string name="stemmer_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
+
+    <string name="syllabifier_header_syllabifier_edittext">Syllabifier EditText</string>
+    <string name="syllabifier_header_syllabifier_textview">Syllabifier TextView - sample</string>
+    <string name="syllabifier_syllabified_text">Syllabified Text : </string>
+    <string name="syllabifier_textview_sample">A syllable is a unit of organization for a sequence of speech sounds.</string>
 
 </resources>
