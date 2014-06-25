@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.silpa.render.IndicEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:text="English"/>
+
+    <org.silpa.render.IndicEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/teal"
+        android:text="हिन्दी"/>
+
+    <org.silpa.render.IndicEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="ಕನ್ನಡ"/>
+
+    <org.silpa.render.IndicEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="മലയാളം"/>
+
+    <org.silpa.render.IndicEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:text="தமிழ்"/>
+
+    <org.silpa.render.IndicEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellow"
+        android:text="తెలుగు"/>
+
+    <org.silpa.render.IndicEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navy"
+        android:text="ଓଡ଼ିଆ"/>
+</LinearLayout>
