@@ -4,16 +4,12 @@
     <string-array name="modules_titles_array">
         <item>Soundex</item>
         <item>Payyans</item>
-        <item>Transliterator</item>
-        <item>Spell Checker</item>
-        <item>Fortune</item>
-        <item>Hyphenator</item>
-        <item>UCA Sort</item>
-        <item>Guess Language</item>
-        <item>Stemmer</item>
-        <item>Syllabifier</item>
         <item>Katapayadi</item>
+        <item>Stemmer</item>
+        <item>Script Renderer</item>
         <item>Character Details</item>
+        <item>Fortune</item>
+        <item>Syllabifier</item>
     </string-array>
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>

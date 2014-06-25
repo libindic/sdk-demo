@@ -5,22 +5,28 @@ package org.silpa.sdk.demo;
  */
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.view.ActionProvider;
+import android.view.ContextMenu;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MainActivity extends Activity {
+import com.actionbarsherlock.app.SherlockFragment;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+
+public class MainActivity extends SherlockFragmentActivity {
 
     private String[] mModuleTitles;
     private DrawerLayout mDrawerLayout;
@@ -31,16 +37,12 @@ public class MainActivity extends Activity {
 
     private static final int SOUNDEX = 0;
     private static final int PAYYANS = 1;
-    private static final int TRANSLITERATOR = 2;
-    private static final int SPELL_CHECKER = 3;
-    private static final int FORTUNE = 4;
-    private static final int HYPENATOR = 5;
-    private static final int UCA_SORT = 6;
-    private static final int GUESS_LANGUAGE = 7;
-    private static final int STEMMER = 8;
-    private static final int SYLLABIFIER = 9;
-    private static final int KATAPAYADI = 10;
-    private static final int CHARACTER_DETAILS = 11;
+    private static final int KATAPAYADI = 2;
+    private static final int STEMMER = 3;
+    private static final int SCRIPT_RENDERER = 4;
+    private static final int CHARACTER_DETAILS = 5;
+    private static final int FORTUNE = 6;
+    private static final int SYLLABIFIER = 7;
 
     private static String LOG_TAG = "Main Activity";
 
@@ -61,20 +63,20 @@ public class MainActivity extends Activity {
 
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.drawable.ic_drawer, R.string.drawer_open,
                 R.string.drawer_close) {
             public void onDrawerClosed(View view) {
-                getActionBar().setTitle(mTitle);
-                invalidateOptionsMenu();
+                getSupportActionBar().setTitle(mTitle);
+                supportInvalidateOptionsMenu();
             }
 
             public void onDrawerOpened(View drawerView) {
-                getActionBar().setTitle(mDrawerTitle);
-                invalidateOptionsMenu();
+                getSupportActionBar().setTitle(mDrawerTitle);
+                supportInvalidateOptionsMenu();
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
@@ -87,7 +89,7 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
+        MenuInflater inflater = this.getSupportMenuInflater();
         inflater.inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
     }
@@ -101,7 +103,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
+        if (mDrawerToggle.onOptionsItemSelected(getMenuItem(item))) {
             return true;
         }
 
@@ -124,7 +126,7 @@ public class MainActivity extends Activity {
     private void selectItem(int position) {
 
         // change fragments here
-        Fragment fragment = null;
+        SherlockFragment fragment = null;
         if (position == SOUNDEX) {
             fragment = new SoundexFragment();
         } else if (position == PAYYANS) {
@@ -139,10 +141,12 @@ public class MainActivity extends Activity {
             fragment = new KatapayadiFragment();
         } else if (position == CHARACTER_DETAILS) {
             fragment = new CharacterDetailsFragment();
+        } else if (position == SCRIPT_RENDERER) {
+            fragment = new ScriptRendererFragment();
         }
 
         if (fragment != null) {
-            FragmentManager fragmentManager = getFragmentManager();
+            FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, fragment)
                     .commit();
@@ -157,7 +161,7 @@ public class MainActivity extends Activity {
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;
-        getActionBar().setTitle(mTitle);
+        getSupportActionBar().setTitle(mTitle);
     }
 
     /**
@@ -177,5 +181,252 @@ public class MainActivity extends Activity {
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggles
         mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    private android.view.MenuItem getMenuItem(final MenuItem item) {
+        return new android.view.MenuItem() {
+            @Override
+            public int getItemId() {
+                return item.getItemId();
+            }
+
+            public boolean isEnabled() {
+                return true;
+            }
+
+            @Override
+            public boolean collapseActionView() {
+                // TODO Auto-generated method stub
+                return false;
+            }
+
+            @Override
+            public boolean expandActionView() {
+                // TODO Auto-generated method stub
+                return false;
+            }
+
+            @Override
+            public ActionProvider getActionProvider() {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public View getActionView() {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public char getAlphabeticShortcut() {
+                // TODO Auto-generated method stub
+                return 0;
+            }
+
+            @Override
+            public int getGroupId() {
+                // TODO Auto-generated method stub
+                return 0;
+            }
+
+            @Override
+            public Drawable getIcon() {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public Intent getIntent() {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+
+            @Override
+            public char getNumericShortcut() {
+                // TODO Auto-generated method stub
+                return 0;
+            }
+
+            @Override
+            public int getOrder() {
+                // TODO Auto-generated method stub
+                return 0;
+            }
+
+
+            @Override
+            public CharSequence getTitle() {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public CharSequence getTitleCondensed() {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public boolean hasSubMenu() {
+                // TODO Auto-generated method stub
+                return false;
+            }
+
+            @Override
+            public SubMenu getSubMenu() {
+                return null;
+            }
+
+            @Override
+            public boolean isActionViewExpanded() {
+                // TODO Auto-generated method stub
+                return false;
+            }
+
+            @Override
+            public boolean isCheckable() {
+                // TODO Auto-generated method stub
+                return false;
+            }
+
+            @Override
+            public boolean isChecked() {
+                // TODO Auto-generated method stub
+                return false;
+            }
+
+            @Override
+            public boolean isVisible() {
+                // TODO Auto-generated method stub
+                return false;
+            }
+
+            @Override
+            public android.view.MenuItem setActionProvider(ActionProvider actionProvider) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setActionView(View view) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setActionView(int resId) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setAlphabeticShortcut(char alphaChar) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setCheckable(boolean checkable) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setChecked(boolean checked) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setEnabled(boolean enabled) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setIcon(Drawable icon) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setIcon(int iconRes) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setIntent(Intent intent) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setNumericShortcut(char numericChar) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setOnActionExpandListener(OnActionExpandListener listener) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setOnMenuItemClickListener(OnMenuItemClickListener menuItemClickListener) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public ContextMenu.ContextMenuInfo getMenuInfo() {
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setShortcut(char numericChar, char alphaChar) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public void setShowAsAction(int actionEnum) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public android.view.MenuItem setShowAsActionFlags(int actionEnum) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setTitle(CharSequence title) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setTitle(int title) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setTitleCondensed(CharSequence title) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public android.view.MenuItem setVisible(boolean visible) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+        };
     }
 }

@@ -1,10 +1,11 @@
 package org.silpa.sdk.demo;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.actionbarsherlock.app.SherlockFragment;
 
 import org.silpa.stemmer.StemmerEditText;
 import org.silpa.stemmer.StemmerTextView;
@@ -14,7 +15,7 @@ import java.util.Map;
 /**
  * Created by sujith on 10/6/14.
  */
-public class StemmerFragment extends Fragment {
+public class StemmerFragment extends SherlockFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

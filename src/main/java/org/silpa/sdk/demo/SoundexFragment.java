@@ -1,6 +1,5 @@
 package org.silpa.sdk.demo;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,13 +7,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.actionbarsherlock.app.SherlockFragment;
+
 import org.silpa.soundex.SoundexEditText;
 import org.silpa.soundex.SoundexTextView;
 
 /**
  * Created by sujith on 10/6/14.
  */
-public class SoundexFragment extends Fragment {
+public class SoundexFragment extends SherlockFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

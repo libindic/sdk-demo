@@ -1,17 +1,18 @@
 package org.silpa.sdk.demo;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.actionbarsherlock.app.SherlockFragment;
 
 import org.silpa.katapayadi.KatapayadiTextView;
 
 /**
  * Created by sujith on 10/6/14.
  */
-public class KatapayadiFragment extends Fragment {
+public class KatapayadiFragment extends SherlockFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

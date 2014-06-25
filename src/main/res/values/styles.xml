@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.Sherlock.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
 
@@ -24,7 +24,6 @@
     <style name="RegularButton">
         <item name="android:layout_height">@dimen/regular_button_size</item>
     </style>
-
 
 
 </resources>
