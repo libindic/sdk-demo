@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_margin="@dimen/layout_margin"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:layout_margin="@dimen/layout_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        style="@style/HeaderTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/character_details_header_chardetails_edittext" />
-
-    <org.silpa.characterdetails.CharacterDetailsEditText
-        android:id="@+id/edtCharDetails"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        style="@style/HeaderTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/character_details_header_chardetails_textview" />
-
-    <org.silpa.characterdetails.CharacterDetailsTextView
-        android:id="@+id/tvCharDetails"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/character_details_textview_sample" />
+        android:layout_height="match_parent">
 
-    <TextView
-        style="@style/HeaderTextView"
-        android:layout_margin="@dimen/layout_margin"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/character_details_note" />
-</LinearLayout>
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/character_details_header_chardetails_edittext" />
+
+        <org.silpa.render.IndicEditText
+            android:id="@+id/edtCharDetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/character_details_header_chardetails_textview" />
+
+        <org.silpa.render.IndicTextView
+            android:id="@+id/tvCharDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/character_details_textview_sample" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/character_details_note" />
+    </LinearLayout>
+</ScrollView>

@@ -76,8 +76,8 @@ public class PayyansFragment extends SherlockFragment {
             }
         });
 
-        PayyansTextView tvPayyans = (PayyansTextView) view.findViewById(R.id.tvPayyans);
-        System.out.println(tvPayyans.getConvertedText());
+        //PayyansTextView tvPayyans = (PayyansTextView) view.findViewById(R.id.tvPayyans);
+        //System.out.println(tvPayyans.getConvertedText());
 
     }
 }

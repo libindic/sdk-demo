@@ -7,12 +7,6 @@ import android.view.ViewGroup;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-import org.silpa.characterdetails.CharacterDetailsEditText;
-import org.silpa.characterdetails.CharacterDetailsObject;
-import org.silpa.characterdetails.CharacterDetailsTextView;
-
-import java.util.Map;
-
 /**
  * Created by sujith on 10/6/14.
  */
@@ -29,16 +23,16 @@ public class CharacterDetailsFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final CharacterDetailsEditText edtCharacterDetails = (CharacterDetailsEditText)
-                view.findViewById(R.id.edtCharDetails);
-        final CharacterDetailsTextView tvCharacterDetails = (CharacterDetailsTextView)
-                view.findViewById(R.id.tvCharDetails);
-
-        CharacterDetailsObject[] arr1 = edtCharacterDetails.getCharacterDetailsAsArray();
-        Map<Character, CharacterDetailsObject> map1 = edtCharacterDetails.getCharacterDetailsAsMap();
-
-        CharacterDetailsObject[] arr2 = tvCharacterDetails.getCharacterDetailsAsArray();
-        Map<Character, CharacterDetailsObject> map2 = tvCharacterDetails.getCharacterDetailsAsMap();
+//        final CharacterDetailsEditText edtCharacterDetails = (CharacterDetailsEditText)
+//                view.findViewById(R.id.edtCharDetails);
+//        final CharacterDetailsTextView tvCharacterDetails = (CharacterDetailsTextView)
+//                view.findViewById(R.id.tvCharDetails);
+//
+//        CharacterDetailsObject[] arr1 = edtCharacterDetails.getCharacterDetailsAsArray();
+//        Map<Character, CharacterDetailsObject> map1 = edtCharacterDetails.getCharacterDetailsAsMap();
+//
+//        CharacterDetailsObject[] arr2 = tvCharacterDetails.getCharacterDetailsAsArray();
+//        Map<Character, CharacterDetailsObject> map2 = tvCharacterDetails.getCharacterDetailsAsMap();
 
     }
 }

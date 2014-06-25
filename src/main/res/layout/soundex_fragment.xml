@@ -1,90 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:soundex="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="@dimen/layout_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        style="@style/HeaderTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/soundex_header_soundex_edittext" />
-
-    <org.silpa.soundex.SoundexEditText
-        android:id="@+id/edtSoundex1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        soundex:soundexCompareWith="@+id/edtSoundex2"
-        soundex:soundexCodeOutputTo="@+id/tvSoundexCode1" />
-
     <LinearLayout
-        android:layout_margin="@dimen/layout_margin"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/soundex_soundex_code_1" />
+            android:text="@string/soundex_header_soundex_edittext" />
 
-        <TextView
-            android:id="@+id/tvSoundexCode1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-
-    <org.silpa.soundex.SoundexEditText
-        android:id="@+id/edtSoundex2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        soundex:soundexCompareWith="@+id/edtSoundex1"
-        soundex:soundexCodeOutputTo="@+id/tvSoundexCode2" />
-
-    <LinearLayout
-        android:layout_margin="@dimen/layout_margin"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
+        <org.silpa.soundex.SoundexEditText
+            android:id="@+id/edtSoundex1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/soundex_soundex_code_2" />
+            soundex:soundexCompareWith="@+id/edtSoundex2"
+            soundex:soundexCodeOutputTo="@+id/tvSoundexCode1" />
+
+        <LinearLayout
+            android:layout_margin="@dimen/layout_margin"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soundex_soundex_code_1" />
+
+            <TextView
+                android:id="@+id/tvSoundexCode1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <org.silpa.soundex.SoundexEditText
+            android:id="@+id/edtSoundex2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            soundex:soundexCompareWith="@+id/edtSoundex1"
+            soundex:soundexCodeOutputTo="@+id/tvSoundexCode2" />
+
+        <LinearLayout
+            android:layout_margin="@dimen/layout_margin"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soundex_soundex_code_2" />
+
+            <TextView
+                android:id="@+id/tvSoundexCode2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btCompare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/soundex_button_compare" />
 
         <TextView
-            android:id="@+id/tvSoundexCode2"
+            android:id="@+id/tvCompareResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/soundex_header_soundex_textview" />
+
+        <org.silpa.soundex.SoundexTextView
+            android:id="@+id/tvSoundex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/soundex_textview_sample" />
+
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btCompare"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/soundex_button_compare" />
-
-    <TextView
-        android:id="@+id/tvCompareResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        style="@style/HeaderTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/soundex_header_soundex_textview" />
-
-    <org.silpa.soundex.SoundexTextView
-        android:id="@+id/tvSoundex"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/soundex_textview_sample"/>
-
-</LinearLayout>
+</ScrollView>

@@ -1,53 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:katapayadi="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="@dimen/layout_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        style="@style/HeaderTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/katapayadi_header_katapayadi_edittext" />
-
-    <org.silpa.katapayadi.KatapayadiEditText
-        android:id="@+id/edtKatapayadi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        katapayadi:katapayadiOutputTo="@+id/tvKatapayadiOutput" />
-
     <LinearLayout
-        android:layout_margin="@dimen/layout_margin"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/katapayadi_katapayadi_number" />
+            android:text="@string/katapayadi_header_katapayadi_edittext" />
+
+        <org.silpa.katapayadi.KatapayadiEditText
+            android:id="@+id/edtKatapayadi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            katapayadi:katapayadiOutputTo="@+id/tvKatapayadiOutput" />
+
+        <LinearLayout
+            android:layout_margin="@dimen/layout_margin"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/katapayadi_katapayadi_number" />
+
+            <org.silpa.render.IndicTextView
+                android:id="@+id/tvKatapayadiOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
 
         <TextView
-            android:id="@+id/tvKatapayadiOutput"
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/katapayadi_header_katapayadi_textview" />
+
+        <org.silpa.katapayadi.KatapayadiTextView
+            android:id="@+id/tvKatapayadi"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/katapayadi_textview_sample" />
 
     </LinearLayout>
-
-
-    <TextView
-        style="@style/HeaderTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/katapayadi_header_katapayadi_textview" />
-
-    <org.silpa.katapayadi.KatapayadiTextView
-        android:id="@+id/tvKatapayadi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/katapayadi_textview_sample" />
-
-</LinearLayout>
+</ScrollView>

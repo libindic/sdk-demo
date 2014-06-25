@@ -16,7 +16,7 @@
 
     <string name="character_details_header_chardetails_edittext">Character Details EditText</string>
     <string name="character_details_header_chardetails_textview">Character Details TextView - sample </string>
-    <string name="character_details_textview_sample">$V.#ऐকਕઔଓஒகఖಕഌ௧৪</string>
+    <string name="character_details_textview_sample">മലയാളം </string>
     <string name="character_details_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
 
     <string name="fortune_header_fortune_textview_sample_1">Fortune TextView - sample 1</string>
@@ -28,10 +28,12 @@
     <string name="katapayadi_katapayadi_number">Katapayadi number : </string>
     <string name="katapayadi_textview_sample">ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല</string>
 
-    <string name="payyans_header_payyans_edittext">Payyans edittext using XML</string>
+    <string name="payyans_header_payyans_edittext">Payyans edittext</string>
     <string name="payyans_header_general">Payyans general conversion</string>
+    <string name="payyans_label_enter_text_ASCII2Unicode">Enter text - ASCII To Unicode</string>
+    <string name="payyans_label_enter_text_Unicode2ASCII">Enter text - Unicode To ASCII</string>
     <string name="payyans_label_enter_text">Enter text to convert</string>
-    <string name="payyans_converted_text">Converted Text</string>
+    <string name="payyans_converted_text">Converted Text : </string>
     <string name="payyans_convert_text">Convert</string>
 
     <string name="soundex_header_soundex_edittext">Soundex edittext</string>
@@ -50,5 +52,8 @@
     <string name="syllabifier_header_syllabifier_textview">Syllabifier TextView - sample</string>
     <string name="syllabifier_syllabified_text">Syllabified Text : </string>
     <string name="syllabifier_textview_sample">A syllable is a unit of organization for a sequence of speech sounds.</string>
+
+    <string name="script_render_header_with_renderer">With script renderer</string>
+    <string name="script_render_header_without_renderer">Without script renderer</string>
 
 </resources>
