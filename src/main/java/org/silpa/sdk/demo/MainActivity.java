@@ -43,6 +43,7 @@ public class MainActivity extends SherlockFragmentActivity {
     private static final int CHARACTER_DETAILS = 5;
     private static final int FORTUNE = 6;
     private static final int SYLLABIFIER = 7;
+    private static final int TRANSLITERATOR = 8;
 
     private static String LOG_TAG = "Main Activity";
 
@@ -143,6 +144,8 @@ public class MainActivity extends SherlockFragmentActivity {
             fragment = new CharacterDetailsFragment();
         } else if (position == SCRIPT_RENDERER) {
             fragment = new ScriptRendererFragment();
+        } else if (position == TRANSLITERATOR) {
+            fragment = new TransliteratorFragment();
         }
 
         if (fragment != null) {

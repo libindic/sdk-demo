@@ -10,6 +10,7 @@
         <item>Character Details</item>
         <item>Fortune</item>
         <item>Syllabifier</item>
+        <item>Transliterator</item>
     </string-array>
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>

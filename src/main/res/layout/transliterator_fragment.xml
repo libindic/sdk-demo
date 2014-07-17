@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:transliterator="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <org.silpa.transliteration.TransliteratorEditText
+            android:id="@+id/edtTransliterator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            transliterator:targetLanguage="english_US"
+            transliterator:transliteratedTextOutputTo="@+id/tvTransliteratorOutput" />
+
+        <org.silpa.render.IndicTextView
+            android:id="@+id/tvTransliteratorOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

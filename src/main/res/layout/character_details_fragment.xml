@@ -9,7 +9,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             style="@style/HeaderTextView"
@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="@string/character_details_header_chardetails_edittext" />
 
-        <org.silpa.render.IndicEditText
+        <org.silpa.characterdetails.CharacterDetailsEditText
             android:id="@+id/edtCharDetails"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="@string/character_details_header_chardetails_textview" />
 
-        <org.silpa.render.IndicTextView
+        <org.silpa.characterdetails.CharacterDetailsTextView
             android:id="@+id/tvCharDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
