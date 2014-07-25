@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shingling="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shingling_header_shingling_edittext" />
+
+        <org.silpa.shingling.ShinglingEditText
+            android:id="@+id/edtShingling"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            shingling:shingleSize="2" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shingling_header_shingling_textview" />
+
+        <org.silpa.shingling.ShinglingTextView
+            android:id="@+id/tvShingling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shingling_textview_sample" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shingling_note" />
+    </LinearLayout>
+</ScrollView>

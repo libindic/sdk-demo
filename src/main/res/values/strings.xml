@@ -11,6 +11,8 @@
         <item>Fortune</item>
         <item>Syllabifier</item>
         <item>Transliterator</item>
+        <item>Ngram</item>
+        <item>Shingling</item>
     </string-array>
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>
@@ -56,5 +58,15 @@
 
     <string name="script_render_header_with_renderer">With script renderer</string>
     <string name="script_render_header_without_renderer">Without script renderer</string>
+
+    <string name="ngram_header_ngram_edittext">Ngram EditText</string>
+    <string name="ngram_header_ngram_textview">Ngram TextView - sample </string>
+    <string name="ngram_textview_sample">ಕನ್ನಡ</string>
+    <string name="ngram_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
+
+    <string name="shingling_header_shingling_edittext">Shingling EditText</string>
+    <string name="shingling_header_shingling_textview">Shingling TextView - sample </string>
+    <string name="shingling_textview_sample">a rose is a rose is a rose</string>
+    <string name="shingling_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
 
 </resources>

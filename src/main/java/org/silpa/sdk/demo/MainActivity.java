@@ -44,6 +44,8 @@ public class MainActivity extends SherlockFragmentActivity {
     private static final int FORTUNE = 6;
     private static final int SYLLABIFIER = 7;
     private static final int TRANSLITERATOR = 8;
+    private static final int NGRAM = 9;
+    private static final int SHINGLING = 10;
 
     private static String LOG_TAG = "Main Activity";
 
@@ -128,24 +130,51 @@ public class MainActivity extends SherlockFragmentActivity {
 
         // change fragments here
         SherlockFragment fragment = null;
-        if (position == SOUNDEX) {
-            fragment = new SoundexFragment();
-        } else if (position == PAYYANS) {
-            fragment = new PayyansFragment();
-        } else if (position == FORTUNE) {
-            fragment = new FortuneFragment();
-        } else if (position == STEMMER) {
-            fragment = new StemmerFragment();
-        } else if (position == SYLLABIFIER) {
-            fragment = new SyllabifierFragment();
-        } else if (position == KATAPAYADI) {
-            fragment = new KatapayadiFragment();
-        } else if (position == CHARACTER_DETAILS) {
-            fragment = new CharacterDetailsFragment();
-        } else if (position == SCRIPT_RENDERER) {
-            fragment = new ScriptRendererFragment();
-        } else if (position == TRANSLITERATOR) {
-            fragment = new TransliteratorFragment();
+
+        switch (position) {
+            case SOUNDEX:
+                fragment = new SoundexFragment();
+                break;
+
+            case PAYYANS:
+                fragment = new PayyansFragment();
+                break;
+
+            case FORTUNE:
+                fragment = new FortuneFragment();
+                break;
+
+            case STEMMER:
+                fragment = new StemmerFragment();
+                break;
+
+            case SYLLABIFIER:
+                fragment = new SyllabifierFragment();
+                break;
+
+            case KATAPAYADI:
+                fragment = new KatapayadiFragment();
+                break;
+
+            case CHARACTER_DETAILS:
+                fragment = new CharacterDetailsFragment();
+                break;
+
+            case SCRIPT_RENDERER:
+                fragment = new ScriptRendererFragment();
+                break;
+
+            case TRANSLITERATOR:
+                fragment = new TransliteratorFragment();
+                break;
+
+            case NGRAM:
+                fragment = new NgramFragment();
+                break;
+
+            case SHINGLING:
+                fragment = new ShinglingFragment();
+                break;
         }
 
         if (fragment != null) {
