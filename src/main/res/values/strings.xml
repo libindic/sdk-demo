@@ -13,6 +13,7 @@
         <item>Transliterator</item>
         <item>Ngram</item>
         <item>Shingling</item>
+        <item>Inexact Search</item>
     </string-array>
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>
@@ -68,5 +69,10 @@
     <string name="shingling_header_shingling_textview">Shingling TextView - sample </string>
     <string name="shingling_textview_sample">a rose is a rose is a rose</string>
     <string name="shingling_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
+
+    <string name="inexact_search_header_inexact_search_edittext">Inexact Search EditText</string>
+    <string name="inexact_search_header_inexact_search_textview">Inexact Search TextView - sample </string>
+    <string name="inexact_search_textview_sample">a rose is a rose is a rose</string>
+    <string name="inexact_search_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
 
 </resources>
