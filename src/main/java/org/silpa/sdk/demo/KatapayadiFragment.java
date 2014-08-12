@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-import org.silpa.katapayadi.KatapayadiTextView;
-
 /**
  * Created by sujith on 10/6/14.
  */
@@ -25,9 +23,9 @@ public class KatapayadiFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final KatapayadiTextView tvKatapayadi = (KatapayadiTextView) view.findViewById(R.id.tvKatapayadi);
-        System.out.println(tvKatapayadi.getKatapayadiNumber());
-        System.out.println(tvKatapayadi.getSwarasthanas());
+//        final KatapayadiTextView tvKatapayadi = (KatapayadiTextView) view.findViewById(R.id.tvKatapayadi);
+//        System.out.println(tvKatapayadi.getKatapayadiNumber());
+//        System.out.println(tvKatapayadi.getSwarasthanas());
 
     }
 }

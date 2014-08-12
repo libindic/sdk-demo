@@ -16,6 +16,19 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:text="@string/soundex_header_soundex_textview" />
+
+        <org.silpa.soundex.SoundexTextView
+            style="@style/SampleTextView"
+            android:id="@+id/tvSoundex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/soundex_textview_sample" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:text="@string/soundex_header_soundex_edittext" />
 
         <org.silpa.soundex.SoundexEditText
@@ -76,21 +89,16 @@
             android:text="@string/soundex_button_compare" />
 
         <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/soundex_textview_compare_result" />
+
+        <TextView
             android:id="@+id/tvCompareResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/soundex_header_soundex_textview" />
-
-        <org.silpa.soundex.SoundexTextView
-            android:id="@+id/tvSoundex"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/soundex_textview_sample" />
 
     </LinearLayout>
 </ScrollView>

@@ -10,7 +10,6 @@ import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragment;
 
 import org.silpa.soundex.SoundexEditText;
-import org.silpa.soundex.SoundexTextView;
 
 /**
  * Created by sujith on 10/6/14.
@@ -37,15 +36,16 @@ public class SoundexFragment extends SherlockFragment {
             @Override
             public void onClick(View view) {
                 int cmp = edtSoundex1.getCompareValue();
-                if (cmp == 0) tvCompareResult.setText("0 - Strings equal");
-                else if (cmp == 1) tvCompareResult.setText("1 - Strings sound phonetically same");
-                else if (cmp == 2) tvCompareResult.setText("2 - Strings are not phonetically same");
-                else if (cmp == -1) tvCompareResult.setText("-1 - Cant compare");
+                if (cmp == 0) tvCompareResult.setText("0  :  Strings equal");
+                else if (cmp == 1) tvCompareResult.setText("1  :  Strings sound phonetically same");
+                else if (cmp == 2)
+                    tvCompareResult.setText("2  :  Strings are not phonetically same");
+                else if (cmp == -1) tvCompareResult.setText("-1  :  Cant compare");
             }
         });
 
 
-        final SoundexTextView tvSoundex = (SoundexTextView) view.findViewById(R.id.tvSoundex);
-        System.out.println(tvSoundex.getSoundexCode());
+//        final SoundexTextView tvSoundex = (SoundexTextView) view.findViewById(R.id.tvSoundex);
+//        System.out.println(tvSoundex.getSoundexCode());
     }
 }

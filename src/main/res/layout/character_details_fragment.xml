@@ -22,23 +22,25 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/character_details_header_chardetails_textview" />
-
-        <org.silpa.characterdetails.CharacterDetailsTextView
-            android:id="@+id/tvCharDetails"
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btGetCharDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/character_details_textview_sample" />
+            android:text="@string/character_details_button_details" />
 
         <TextView
-            style="@style/HeaderTextView"
-            android:layout_margin="@dimen/layout_margin"
+            style="@style/LabelTextView"
+            android:textStyle="bold"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/character_details_note" />
+            android:text="@string/character_details_textview_details" />
+
+        <TextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvCharDetails"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
