@@ -47,6 +47,7 @@ public class MainActivity extends SherlockFragmentActivity {
     private static final int NGRAM = 9;
     private static final int SHINGLING = 10;
     private static final int INEXACT_SEARCH = 11;
+    private static final int GUESS_LANGUAGE = 12;
 
     private static String LOG_TAG = "Main Activity";
 
@@ -179,6 +180,10 @@ public class MainActivity extends SherlockFragmentActivity {
 
             case INEXACT_SEARCH:
                 fragment = new InexactSearchFragment();
+                break;
+
+            case GUESS_LANGUAGE:
+                fragment = new GuessLanguageFragment();
                 break;
         }
 

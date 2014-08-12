@@ -14,6 +14,7 @@
         <item>Ngram</item>
         <item>Shingling</item>
         <item>Inexact Search</item>
+        <item>Guess Language</item>
     </string-array>
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>
@@ -74,5 +75,10 @@
     <string name="inexact_search_header_inexact_search_textview">Inexact Search TextView - sample </string>
     <string name="inexact_search_textview_sample">a rose is a rose is a rose</string>
     <string name="inexact_search_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
+
+    <string name="guess_language_header">Guess Language</string>
+    <string name="guess_language_textview_details">Language details : </string>
+    <string name="guess_language_button_get_language">Get Language</string>
+    <string name="guess_language_note">(Enter atleast 20 characters for good accuracy)</string>
 
 </resources>
