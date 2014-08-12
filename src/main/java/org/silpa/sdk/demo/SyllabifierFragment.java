@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-import org.silpa.syllabifier.SyllabifierTextView;
-
 /**
  * Created by sujith on 10/6/14.
  */
@@ -25,8 +23,8 @@ public class SyllabifierFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final SyllabifierTextView tvSyllabifier = (SyllabifierTextView) view.findViewById(R.id.tvSyllabifier);
-        System.out.println(tvSyllabifier.getSyllabifiedText());
+//        final SyllabifierTextView tvSyllabifier = (SyllabifierTextView) view.findViewById(R.id.tvSyllabifier);
+//        System.out.println(tvSyllabifier.getSyllabifiedText());
 
     }
 }

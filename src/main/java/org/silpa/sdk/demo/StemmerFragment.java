@@ -4,11 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
 import org.silpa.stemmer.StemmerEditText;
-import org.silpa.stemmer.StemmerTextView;
 
 import java.util.Map;
 
@@ -30,14 +31,23 @@ public class StemmerFragment extends SherlockFragment {
 
         final StemmerEditText edtStemmer = (StemmerEditText)
                 view.findViewById(R.id.edtStemmer);
-        final StemmerTextView tvStemmer = (StemmerTextView)
-                view.findViewById(R.id.tvStemmer);
+        final Button btGetStemmedWords = (Button) view.findViewById(R.id.btGetStemmedWords);
+        final TextView tvStemmedWords = (TextView) view.findViewById(R.id.tvStemmedWords);
 
-        String[] arr1 = edtStemmer.getStemWordsAsArray();
-        Map<String, String> map1 = edtStemmer.getStemWordsAsMap();
+        btGetStemmedWords.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Map<String, String> stemmedWords = edtStemmer.getStemWordsAsMap();
+                String result = "";
+                for (Map.Entry<String, String> entry : stemmedWords.entrySet()) {
+                    String key = entry.getKey();
+                    String value = entry.getValue();
+                    result = result + key + "  :  " + value + "\n";
+                }
 
-        String[] arr2 = tvStemmer.getStemWordsAsArray();
-        Map<String, String> map2 = tvStemmer.getStemWordsAsMap();
+                tvStemmedWords.setText(result);
+            }
+        });
 
     }
 }
