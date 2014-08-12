@@ -22,6 +22,10 @@
         <item name="android:textSize">@dimen/regular_text_size</item>
     </style>
 
+    <style name="SampleTextView">
+        <item name="android:layout_margin">@dimen/sample_textview_margin</item>
+    </style>
+
     <style name="RegularButton">
         <item name="android:layout_height">@dimen/regular_button_size</item>
     </style>
