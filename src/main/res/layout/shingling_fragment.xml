@@ -16,31 +16,54 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shingling_header_shingling_edittext" />
-
-        <org.silpa.shingling.ShinglingEditText
-            android:id="@+id/edtShingling"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            shingling:shingleSize="2" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="@string/shingling_header_shingling_textview" />
 
         <org.silpa.shingling.ShinglingTextView
-            android:id="@+id/tvShingling"
+            style="@style/SampleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/shingling_textview_sample" />
 
         <TextView
             style="@style/HeaderTextView"
-            android:layout_margin="@dimen/layout_margin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shingling_note" />
+            android:text="@string/shingling_header_shingling_edittext" />
+
+        <org.silpa.shingling.ShinglingEditText
+            android:id="@+id/edtShingling"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edittext_hint_enter_a_sentence"
+            shingling:shingleSize="2" />
+
+        <EditText
+            android:id="@+id/edtWValue"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/shingling_edittext_hint_w_value" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btGetShingles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shingling_button_get_shingles" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shingling_textview_word_shingles" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvShingles"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </ScrollView>

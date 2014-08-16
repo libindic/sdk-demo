@@ -35,6 +35,7 @@
             android:id="@+id/edtSyllabifier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/edittext_hint_enter_a_sentence"
             syllabifier:syllabifierOutputTo="@+id/tvSyllabifierOutput" />
 
         <LinearLayout

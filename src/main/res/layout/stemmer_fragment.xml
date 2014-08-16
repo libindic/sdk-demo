@@ -31,6 +31,7 @@
 
         <org.silpa.stemmer.StemmerEditText
             android:id="@+id/edtStemmer"
+            android:hint="@string/edittext_hint_enter_a_sentence"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 
@@ -48,7 +49,7 @@
             android:layout_height="wrap_content"
             android:text="@string/stemmer_textview_stem_words" />
 
-        <TextView
+        <org.silpa.render.IndicTextView
             style="@style/RegularTextView"
             android:id="@+id/tvStemmedWords"
             android:layout_margin="@dimen/layout_margin"

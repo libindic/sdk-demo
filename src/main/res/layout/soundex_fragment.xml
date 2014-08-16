@@ -35,6 +35,7 @@
             android:id="@+id/edtSoundex1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/edittext_hint_enter_a_word"
             soundex:soundexCompareWith="@+id/edtSoundex2"
             soundex:soundexCodeOutputTo="@+id/tvSoundexCode1" />
 
@@ -61,6 +62,7 @@
             android:id="@+id/edtSoundex2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/edittext_hint_enter_a_word"
             soundex:soundexCompareWith="@+id/edtSoundex1"
             soundex:soundexCodeOutputTo="@+id/tvSoundexCode2" />
 

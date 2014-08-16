@@ -16,17 +16,55 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/inexact_search_header_inexact_search_edittext" />
+            android:text="@string/inexact_search_header_inexact_search_textview" />
+
+        <org.silpa.inexactsearch.InexactSearchTextView
+            style="@style/SampleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inexact_search_textview_sample" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inexact_search_compare" />
 
         <org.silpa.inexactsearch.InexactSearchEditText
             android:id="@+id/edtInexactSearch1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            inexactsearch:inexactSearchReferenceField="@+id/edtInexactSearch2"
-            inexactsearch:inexactSearchReferenceString="mangalore" />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/edittext_hint_enter_a_word"
+            inexactsearch:inexactSearchReferenceField="@+id/edtInexactSearch2" />
 
         <org.silpa.inexactsearch.InexactSearchEditText
             android:id="@+id/edtInexactSearch2"
+            android:hint="@string/edittext_hint_enter_a_word"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btInexactSearchCompare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inexact_search_button_compare" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inexact_search_compare_result" />
+
+        <TextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvInexactSearchCompare"
+            android:layout_margin="@dimen/layout_margin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 
@@ -34,19 +72,45 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/inexact_search_header_inexact_search_textview" />
+            android:text="@string/inexact_search_search" />
 
-        <org.silpa.inexactsearch.InexactSearchTextView
-            android:id="@+id/tvInexactSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/inexact_search_textview_sample" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_margin="@dimen/layout_margin"
+        <org.silpa.inexactsearch.InexactSearchEditText
+            android:id="@+id/edtInexactSearch3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/inexact_search_note" />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/edittext_hint_enter_a_word"
+            inexactsearch:inexactSearchReferenceField="@+id/edtInexactSearch4" />
+
+        <org.silpa.inexactsearch.InexactSearchEditText
+            android:id="@+id/edtInexactSearch4"
+            android:hint="@string/inexact_search_edittext_hint_search"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btInexactSearchSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inexact_search_button_search" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inexact_search_search_result" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvInexactSearchSearch"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </ScrollView>

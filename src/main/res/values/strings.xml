@@ -15,15 +15,20 @@
         <item>Shingling</item>
         <item>Inexact Search</item>
         <item>Guess Language</item>
+        <item>Text Similarity</item>
     </string-array>
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>
+
+    <string name="edittext_hint_enter_a_sentence">Enter a sentence here</string>
+    <string name="edittext_hint_enter_a_word">Enter a word here</string>
 
     <string name="character_details_header_chardetails_edittext">Character Details EditText</string>
     <string name="character_details_header_chardetails_textview">Character Details TextView - sample </string>
     <string name="character_details_textview_sample"></string>
     <string name="character_details_textview_details">Character details : </string>
     <string name="character_details_button_details">Get details</string>
+    <string name="character_details_edittext_hint">Enter characters here</string>
 
     <string name="fortune_header_fortune_textview_sample_1">Fortune TextView - sample 1</string>
     <string name="fortune_header_fortune_textview_sample_2">Fortune TextView - sample 2</string>
@@ -67,22 +72,44 @@
 
     <string name="ngram_header_ngram_edittext">Ngram EditText</string>
     <string name="ngram_header_ngram_textview">Ngram TextView - sample </string>
-    <string name="ngram_textview_sample">ಕನ್ನಡ</string>
-    <string name="ngram_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
+    <string name="ngram_textview_sample">catterpillar</string>
+    <string name="ngram_edittext_hint_n_value">Enter N value (Default - 2)</string>
+    <string name="ngram_textview_letter_ngram">Letter N-gram : </string>
+    <string name="ngram_textview_syllable_ngram">Syllable N-gram : </string>
+    <string name="ngram_textview_word_ngram">Word N-gram : </string>
+    <string name="ngram_button_get_n_grams">Get N-grams</string>
 
     <string name="shingling_header_shingling_edittext">Shingling EditText</string>
     <string name="shingling_header_shingling_textview">Shingling TextView - sample </string>
     <string name="shingling_textview_sample">a rose is a rose is a rose</string>
-    <string name="shingling_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
+    <string name="shingling_edittext_hint_w_value">Enter W value (Default - 4)</string>
+    <string name="shingling_button_get_shingles">Get Shingles</string>
+    <string name="shingling_textview_word_shingles">Shingles : </string>
 
     <string name="inexact_search_header_inexact_search_edittext">Inexact Search EditText</string>
     <string name="inexact_search_header_inexact_search_textview">Inexact Search TextView - sample </string>
-    <string name="inexact_search_textview_sample">a rose is a rose is a rose</string>
-    <string name="inexact_search_note">Please check docs for usage of this module. Results can be retreived only via Java</string>
+    <string name="inexact_search_textview_sample">ஸில்பா</string>
+    <string name="inexact_search_compare">Inexact Search EditText - Compare</string>
+    <string name="inexact_search_button_compare">Compare</string>
+    <string name="inexact_search_compare_result">Compare : </string>
+    <string name="inexact_search_search">Inexact Search EditText - Search</string>
+    <string name="inexact_search_button_search">Search</string>
+    <string name="inexact_search_search_result">Result : </string>
+    <string name="inexact_search_edittext_hint_search">Enter word to search</string>
 
     <string name="guess_language_header">Guess Language</string>
     <string name="guess_language_textview_details">Language details : </string>
     <string name="guess_language_button_get_language">Get Language</string>
     <string name="guess_language_note">(Enter atleast 20 characters for good accuracy)</string>
+
+    <string name="transliteration_header_transliterator_edittext">Transliteration EditText</string>
+    <string name="transliteration_header_transliterator_textview">Transliteration TextView - sample</string>
+    <string name="transliteration_textview_sample">नमस्कार सिल्पा की दुनिया में आपका स्वागत है</string>
+    <string name="transliteration_textview_transliterated_text">Transliterated text : </string>
+    <string name="transliteration_textview_self_transliteration">Self Transliteration - sample (Malayalam)</string>
+
+    <string name="text_similarity_header">Text Similarity</string>
+    <string name="text_similarity_compare_results">Compare value : </string>
+    <string name="text_similarity_button_compare">Compare</string>
 
 </resources>

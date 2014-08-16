@@ -12,17 +12,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transliteration_header_transliterator_textview" />
+
+        <org.silpa.transliteration.TransliteratorTextView
+            style="@style/SampleTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transliteration_textview_sample" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transliteration_header_transliterator_edittext" />
+
         <org.silpa.transliteration.TransliteratorEditText
             android:id="@+id/edtTransliterator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:hint="@string/edittext_hint_enter_a_sentence"
             transliterator:targetLanguage="english_US"
             transliterator:transliteratedTextOutputTo="@+id/tvTransliteratorOutput" />
 
-        <org.silpa.render.IndicTextView
-            android:id="@+id/tvTransliteratorOutput"
+        <Spinner
+            android:id="@+id/spTargetLanguage"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transliteration_textview_transliterated_text" />
+
+        <org.silpa.render.IndicTextView
+            android:id="@+id/tvTransliteratorOutput"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transliteration_textview_self_transliteration" />
+
+        <org.silpa.transliteration.TransliteratorEditText
+            android:id="@+id/edtTransliterator1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:hint="@string/edittext_hint_enter_a_sentence"
+            transliterator:targetLanguage="malayalam"
+            transliterator:transliteratedTextOutputTo="@+id/edtTransliterator1" />
 
     </LinearLayout>
 </ScrollView>

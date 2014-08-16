@@ -35,6 +35,7 @@
             android:id="@+id/edtKatapayadi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/edittext_hint_enter_a_word"
             katapayadi:katapayadiOutputTo="@+id/tvKatapayadiOutput" />
 
         <LinearLayout
@@ -49,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/katapayadi_katapayadi_number" />
 
-            <org.silpa.render.IndicTextView
+            <TextView
                 android:id="@+id/tvKatapayadiOutput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ngram="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="@dimen/layout_margin"
     android:layout_width="match_parent"
@@ -16,22 +15,10 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ngram_header_ngram_edittext" />
-
-        <org.silpa.ngram.NgramEditText
-            android:id="@+id/edtNgram"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            ngram:ngramType="syllable"
-            ngram:ngramNValue="3" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="@string/ngram_header_ngram_textview" />
 
         <org.silpa.ngram.NgramTextView
+            style="@style/SampleTextView"
             android:id="@+id/tvNgram"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,9 +26,71 @@
 
         <TextView
             style="@style/HeaderTextView"
-            android:layout_margin="@dimen/layout_margin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ngram_note" />
+            android:text="@string/ngram_header_ngram_edittext" />
+
+        <org.silpa.ngram.NgramEditText
+            android:id="@+id/edtNgram"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter word here" />
+
+        <EditText
+            android:id="@+id/edtNValue"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ngram_edittext_hint_n_value" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btGetNgram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ngram_button_get_n_grams" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ngram_textview_letter_ngram" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvLetterNgram"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ngram_textview_word_ngram" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvWordNgram"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ngram_textview_syllable_ngram" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvSyllableNgram"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </ScrollView>

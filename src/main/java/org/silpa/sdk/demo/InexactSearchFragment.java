@@ -1,15 +1,17 @@
 package org.silpa.sdk.demo;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
 import org.silpa.inexactsearch.InexactSearchEditText;
+
+import java.util.Map;
 
 /**
  * Created by sujith on 23/7/14.
@@ -28,23 +30,40 @@ public class InexactSearchFragment extends SherlockFragment {
     private void initView(View view) {
 
         final InexactSearchEditText edtInexactSearch1 = (InexactSearchEditText) view.findViewById(R.id.edtInexactSearch1);
-        edtInexactSearch1.addTextChangedListener(new TextWatcher() {
+        //final InexactSearchEditText edtInexactSearch2 = (InexactSearchEditText) view.findViewById(R.id.edtInexactSearch2);
+        final TextView tvInexactSearchCompare = (TextView) view.findViewById(R.id.tvInexactSearchCompare);
+        final Button btInexactSearchCompare = (Button) view.findViewById(R.id.btInexactSearchCompare);
+        btInexactSearchCompare.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+            public void onClick(View view) {
+                double compareValue = edtInexactSearch1.getCompareValue();
+                double bigramAverage = edtInexactSearch1.getBigramAverage();
 
+                String res = "";
+                res += "Compare value : " + compareValue + "\n";
+                res += "Bi-gram Average : " + bigramAverage + "\n";
+                tvInexactSearchCompare.setText(res);
             }
+        });
 
+
+        final InexactSearchEditText edtInexactSearch3 = (InexactSearchEditText) view.findViewById(R.id.edtInexactSearch3);
+        //final InexactSearchEditText edtInexactSearch4 = (InexactSearchEditText) view.findViewById(R.id.edtInexactSearch4);
+        final TextView tvInexactSearchSearch = (TextView) view.findViewById(R.id.tvInexactSearchSearch);
+        final Button btInexactSearchSearch = (Button) view.findViewById(R.id.btInexactSearchSearch);
+        btInexactSearchSearch.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+            public void onClick(View view) {
+                Map<String, Double> searchResults = edtInexactSearch3.getSearchResults();
 
-            }
+                String res = "";
+                for (Map.Entry<String, Double> entry : searchResults.entrySet()) {
+                    String key = entry.getKey();
+                    double val = entry.getValue();
+                    res += key + "  :  " + val + "\n";
+                }
 
-            @Override
-            public void afterTextChanged(Editable editable) {
-                System.out.println("Bigram avg : " + edtInexactSearch1.getBigramAverage());
-                System.out.println("Compare value : " + edtInexactSearch1.getCompareValue());
-                // System.out.println("Bigram avg : " + edtInexactSearch1.getBigramAverage());
-                System.out.println();
+                tvInexactSearchSearch.setText(res);
             }
         });
     }

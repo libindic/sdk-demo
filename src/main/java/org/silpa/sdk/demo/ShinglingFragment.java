@@ -1,16 +1,16 @@
 package org.silpa.sdk.demo;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
+import org.silpa.render.IndicTextView;
 import org.silpa.shingling.ShinglingEditText;
-import org.silpa.shingling.ShinglingTextView;
 
 /**
  * Created by sujith on 25/7/14.
@@ -29,25 +29,26 @@ public class ShinglingFragment extends SherlockFragment {
     private void initView(View view) {
 
         final ShinglingEditText edtShingling = (ShinglingEditText) view.findViewById(R.id.edtShingling);
-        edtShingling.addTextChangedListener(new TextWatcher() {
+        final EditText edtWValue = (EditText) view.findViewById(R.id.edtWValue);
+
+        final IndicTextView tvShingles = (IndicTextView) view.findViewById(R.id.tvShingles);
+        final Button btGetShingles = (Button) view.findViewById(R.id.btGetShingles);
+
+        btGetShingles.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+            public void onClick(View view) {
 
-            }
+                int wValue;
+                try {
+                    wValue = Integer.parseInt(edtWValue.getText().toString().trim());
+                } catch (Exception e) {
+                    wValue = 4;
+                }
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                System.out.println(edtShingling.getShingles().toString());
+                edtShingling.setShingleSize(wValue);
+                tvShingles.setText(edtShingling.getShingles().toString());
             }
         });
-
-        final ShinglingTextView tvShingling = (ShinglingTextView) view.findViewById(R.id.tvShingling);
-        System.out.println(tvShingling.getShingles().toString());
     }
 }
 

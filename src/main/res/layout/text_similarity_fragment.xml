@@ -15,31 +15,41 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/character_details_header_chardetails_edittext" />
+            android:text="@string/text_similarity_header" />
 
-        <org.silpa.characterdetails.CharacterDetailsEditText
-            android:id="@+id/edtCharDetails"
+        <EditText
+            android:id="@+id/edtTextSimilarity1"
+            android:hint="@string/edittext_hint_enter_a_sentence"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/character_details_edittext_hint" />
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edtTextSimilarity2"
+            android:hint="@string/edittext_hint_enter_a_sentence"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             style="@style/RegularButton"
-            android:id="@+id/btGetCharDetails"
+            android:id="@+id/btTextSimilarityCompare"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/character_details_button_details" />
+            android:text="@string/text_similarity_button_compare" />
 
         <TextView
             style="@style/LabelTextView"
             android:textStyle="bold"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/character_details_textview_details" />
+            android:text="@string/text_similarity_compare_results" />
 
         <TextView
             style="@style/RegularTextView"
-            android:id="@+id/tvCharDetails"
+            android:id="@+id/tvTextSimilarityResult"
             android:layout_margin="@dimen/layout_margin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
