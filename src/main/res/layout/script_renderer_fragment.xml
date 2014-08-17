@@ -15,98 +15,180 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/script_render_header_with_renderer" />
+            android:text="@string/script_render_header_text_view" />
 
-        <org.silpa.render.IndicEditText
-            android:layout_width="match_parent"
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/blue"
-            android:text="English" />
-
-        <org.silpa.render.IndicEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/teal"
-            android:text="हिन्दी" />
-
-        <org.silpa.render.IndicEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/red"
-            android:text="ಕನ್ನಡ" />
-
-        <org.silpa.render.IndicEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="മലയാളം" />
-
-        <org.silpa.render.IndicEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/green"
-            android:text="தமிழ்" />
-
-        <org.silpa.render.IndicEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/yellow"
-            android:text="తెలుగు" />
+            android:text="@string/script_render_with_renderer" />
 
         <org.silpa.render.IndicTextView
-            android:id="@+id/edt1"
+            style="@style/SampleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/navy"
-            android:text="ആന മെലിഞ്ഞാല്‍ തൊഴുത്തില്‍ കെട്ടാമ"/>
+            android:textSize="@dimen/regular_text_size"
+            android:text="@string/script_render_text_view_sample_1" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/SampleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/regular_text_size"
+            android:text="@string/script_render_text_view_sample_2" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/SampleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/regular_text_size"
+            android:text="@string/script_render_text_view_sample_3" />
+
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/script_render_without_renderer" />
+
+        <TextView
+            style="@style/SampleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/regular_text_size"
+            android:text="@string/script_render_text_view_sample_1" />
+
+        <TextView
+            style="@style/SampleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/regular_text_size"
+            android:text="@string/script_render_text_view_sample_2" />
+
+        <TextView
+            style="@style/SampleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/regular_text_size"
+            android:text="@string/script_render_text_view_sample_3" />
 
         <TextView
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/script_render_header_without_renderer" />
+            android:layout_marginTop="15dp"
+            android:text="@string/script_render_header_edittext" />
 
-        <EditText
+        <org.silpa.render.IndicEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:textColor="@color/blue"
-            android:text="English" />
+            android:text="@string/script_render_text_view_sample_1" />
 
-        <EditText
+        <org.silpa.render.IndicEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/teal"
-            android:text="हिन्दी" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:textColor="@color/red"
-            android:text="ಕನ್ನಡ" />
+            android:text="@string/script_render_text_view_sample_2" />
 
-        <EditText
+        <org.silpa.render.IndicEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="മലയാളം" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:textColor="@color/green"
-            android:text="தமிழ்" />
+            android:text="@string/script_render_text_view_sample_3" />
 
-        <EditText
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/script_render_header_render" />
+
+        <org.silpa.render.IndicEditText
+            android:id="@+id/edtRenderInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/yellow"
-            android:text="తెలుగు" />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/edittext_hint_enter_a_sentence" />
 
-        <EditText
+        <LinearLayout
+            android:layout_margin="@dimen/layout_margin"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtRenderWidth"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/script_render_edittext_hint_width" />
+
+            <EditText
+                android:id="@+id/edtRenderHeight"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/script_render_edittext_hint_height" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="@dimen/layout_margin"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtRenderFontSize"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/script_render_edittext_hint_font_size" />
+
+            <Spinner
+                android:id="@+id/spRenderColor"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btGetRenderImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/navy"
-            android:text="ଓଡ଼ିଆ" />
+            android:text="@string/script_render_button_get_image" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/script_render_textview_image_result" />
+
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/ivRenderedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
 </ScrollView>

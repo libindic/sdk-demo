@@ -49,6 +49,9 @@ public class MainActivity extends SherlockFragmentActivity {
     private static final int INEXACT_SEARCH = 11;
     private static final int GUESS_LANGUAGE = 12;
     private static final int TEXT_SIMILARITY = 13;
+    private static final int HYPHENATION = 14;
+    private static final int UCA_SORT = 15;
+    private static final int SPELL_CHECKER = 16;
 
     private static String LOG_TAG = "Main Activity";
 
@@ -189,6 +192,18 @@ public class MainActivity extends SherlockFragmentActivity {
 
             case TEXT_SIMILARITY:
                 fragment = new TextSimilarityFragment();
+                break;
+
+            case HYPHENATION:
+                fragment = new HyphenationFragment();
+                break;
+
+            case UCA_SORT:
+                fragment = new UCASortFragment();
+                break;
+
+            case SPELL_CHECKER:
+                fragment = new SpellCheckerFragment();
                 break;
         }
 

@@ -16,6 +16,9 @@
         <item>Inexact Search</item>
         <item>Guess Language</item>
         <item>Text Similarity</item>
+        <item>Hyphenation</item>
+        <item>UCA Sort</item>
+        <item>Spell Checker</item>
     </string-array>
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>
@@ -67,8 +70,19 @@
     <string name="syllabifier_syllabified_text">Syllabified Text : </string>
     <string name="syllabifier_textview_sample">A syllable is a unit of organization for a sequence of speech sounds.</string>
 
-    <string name="script_render_header_with_renderer">With script renderer</string>
-    <string name="script_render_header_without_renderer">Without script renderer</string>
+    <string name="script_render_header_text_view">Indic TextView</string>
+    <string name="script_render_header_edittext">Indic EditText</string>
+    <string name="script_render_with_renderer">With script renderer</string>
+    <string name="script_render_without_renderer">Default rendering</string>
+    <string name="script_render_text_view_sample_1">हिन्दी    മലയാളം    বাংলা</string>
+    <string name="script_render_text_view_sample_2">ಕನ್ನಡ    தமிழ்    ଓଡ଼ିଆ</string>
+    <string name="script_render_text_view_sample_3">ગુજરાતી    తెలుగు    ਪੰਜਾਬੀ</string>
+    <string name="script_render_header_render">Render</string>
+    <string name="script_render_edittext_hint_width">Width</string>
+    <string name="script_render_edittext_hint_height">Height</string>
+    <string name="script_render_edittext_hint_font_size">Size</string>
+    <string name="script_render_button_get_image">Get Image</string>
+    <string name="script_render_textview_image_result">Rendered Image : </string>
 
     <string name="ngram_header_ngram_edittext">Ngram EditText</string>
     <string name="ngram_header_ngram_textview">Ngram TextView - sample </string>
@@ -111,5 +125,23 @@
     <string name="text_similarity_header">Text Similarity</string>
     <string name="text_similarity_compare_results">Compare value : </string>
     <string name="text_similarity_button_compare">Compare</string>
+
+    <string name="uca_sort_header">UCA Sort</string>
+    <string name="uca_sort_results">Sort results : </string>
+    <string name="uca_sort_button_sort">Sort</string>
+
+    <string name="hyphenation_with_hyphenation">With Hyphenation</string>
+    <string name="hyphenation_without_hyphenation">Without Hyphenation</string>
+    <string name="hyphenation_with_hyphenation_sample_1">Hyphenation - sample</string>
+
+    <string name="spell_checker_header_spell_check">Spell-check</string>
+    <string name="spell_checker_button_check_correctness">Check correctness</string>
+    <string name="spell_checker_textview_correctness">Correctness : </string>
+    <string name="spell_checker_header_suggestions">Suggestions</string>
+    <string name="spell_checker_button_get_suggestions">Get suggestions</string>
+    <string name="spell_checker_textview_suggestions">Suggestion : </string>
+    <string name="spell_checker_header_mispelt_words">Misspelt words</string>
+    <string name="spell_checker_button_get_mispelt_words">Get misspelt words</string>
+    <string name="spell_checker_textview_mispelt_words">Misspelt words : </string>
 
 </resources>
