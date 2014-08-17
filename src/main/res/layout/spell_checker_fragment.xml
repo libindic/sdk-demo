@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_header_spell_check" />
+
+        <org.silpa.render.IndicEditText
+            android:id="@+id/edtSpellCheck1"
+            android:hint="@string/edittext_hint_enter_a_word"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btSpellCheck1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_button_check_correctness" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_textview_correctness" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvSpellCheck1"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_header_suggestions" />
+
+        <org.silpa.render.IndicEditText
+            android:id="@+id/edtSpellCheck2"
+            android:hint="@string/edittext_hint_enter_a_word"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btSpellCheck2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_button_get_suggestions" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_textview_suggestions" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvSpellCheck2"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_header_mispelt_words" />
+
+        <org.silpa.render.IndicEditText
+            android:id="@+id/edtSpellCheck3"
+            android:hint="@string/edittext_hint_enter_a_sentence"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btSpellCheck3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_button_get_mispelt_words" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spell_checker_textview_mispelt_words" />
+
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvSpellCheck3"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
