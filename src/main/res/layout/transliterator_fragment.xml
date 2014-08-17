@@ -30,14 +30,12 @@
             android:layout_height="wrap_content"
             android:text="@string/transliteration_header_transliterator_edittext" />
 
-        <org.silpa.transliteration.TransliteratorEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtTransliterator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textNoSuggestions"
-            android:hint="@string/edittext_hint_enter_a_sentence"
-            transliterator:targetLanguage="english_US"
-            transliterator:transliteratedTextOutputTo="@+id/tvTransliteratorOutput" />
+            android:hint="@string/edittext_hint_enter_a_sentence" />
 
         <Spinner
             android:id="@+id/spTargetLanguage"
@@ -45,6 +43,13 @@
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btTransliterate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transliteration_button_transliterate" />
 
         <TextView
             style="@style/LabelTextView"

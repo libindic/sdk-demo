@@ -119,6 +119,7 @@
     <string name="transliteration_header_transliterator_edittext">Transliteration EditText</string>
     <string name="transliteration_header_transliterator_textview">Transliteration TextView - sample</string>
     <string name="transliteration_textview_sample">नमस्कार सिल्पा की दुनिया में आपका स्वागत है</string>
+    <string name="transliteration_button_transliterate">Transliterate</string>
     <string name="transliteration_textview_transliterated_text">Transliterated text : </string>
     <string name="transliteration_textview_self_transliteration">Self Transliteration - sample (Malayalam)</string>
 

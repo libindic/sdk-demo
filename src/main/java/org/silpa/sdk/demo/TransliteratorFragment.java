@@ -4,14 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-import org.silpa.transliteration.TransliteratorEditText;
+import org.silpa.render.IndicEditText;
+import org.silpa.render.IndicTextView;
+import org.silpa.transliteration.Transliterator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -67,32 +68,25 @@ public class TransliteratorFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final TransliteratorEditText edtTransliterator = (TransliteratorEditText) view.findViewById(R.id.edtTransliterator);
+        final Transliterator transliterator = new Transliterator(getActivity());
+        final IndicEditText edtTransliterator = (IndicEditText) view.findViewById(R.id.edtTransliterator);
         final Spinner spTargetLanguage = (Spinner) view.findViewById(R.id.spTargetLanguage);
+        final Button btTransliterate = (Button) view.findViewById(R.id.btTransliterate);
+        final IndicTextView tvTransliteratorOutput = (IndicTextView) view.findViewById(R.id.tvTransliteratorOutput);
 
         ArrayAdapter<String> dataAdapterFontMap = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_spinner_item, listTargetLanguage);
         dataAdapterFontMap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spTargetLanguage.setAdapter(dataAdapterFontMap);
 
-        spTargetLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            protected Adapter initializedAdapter = null;
-
+        btTransliterate.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                if (initializedAdapter != parentView.getAdapter()) {
-                    initializedAdapter = parentView.getAdapter();
-                    return;
-                }
+            public void onClick(View view) {
 
-                String selectedLang = parentView.getItemAtPosition(position).toString();
-                String languageCode = languageNameMap.get(selectedLang);
-                edtTransliterator.setTargetLanguage(languageCode);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
+                String text = edtTransliterator.getText().toString();
+                String languageCode = languageNameMap.get(spTargetLanguage.getSelectedItem().toString());
+                String transliteratedText = transliterator.transliterate(text, languageCode);
+                tvTransliteratorOutput.setText(transliteratedText);
             }
         });
     }
