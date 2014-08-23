@@ -15,13 +15,25 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:text="@string/description_header" />
+
+        <TextView
+            style="@style/RegularTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/guess_language_description" />
+
+        <TextView
+            style="@style/HeaderTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:text="@string/guess_language_header" />
 
         <EditText
             android:id="@+id/edtGuessLanguage"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/edittext_hint_enter_a_sentence"/>
+            android:hint="@string/edittext_hint_enter_a_sentence" />
 
         <TextView
             android:layout_width="fill_parent"

@@ -23,6 +23,25 @@
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>
 
+    <string name="description_header">Description</string>
+    <string name="soundex_description">Soundex is a phonetic indexing algorithm. It is used to search/retrieve words having similar pronunciation but slightly different spelling. The soundex code for a word is an english alphabet followed by a number of digits. This module provides indic soundex algorithm based soundex codes for a word.</string>
+    <string name="payyans_description">Payyans is a module used for converting ASCII font specific data into Unicode and vice versa.</string>
+    <string name="katapayadi_description">Katapayadi sankhya is a simplification of Aryabhata\'s Sanskrit numerals, due probably to Haridatta from Kerala. In Malayalam it is also known as \'Paralperu\'. This module is used to generate Katapayadi number for a given word.</string>
+    <string name="stemmer_description">Stemmer is used to stem the words in the given text. This uses a rule based approach.</string>
+    <string name="script_renderer_description">Script Render modules is used to support constant rendering of Indic complex scripts.</string>
+    <string name="character_details_description">Character Details module is used to get unicode character details.</string>
+    <string name="fortune_description">Fortune module is used to get a random quote.</string>
+    <string name="syllabifier_description">Syllabifier module is used to split a given text into syllables which are units of organization for a sequence of speech sounds. Language of each word will be detected. Works on Malayalam, Kannada, Bengali, Tamil and Hindi.</string>
+    <string name="transliteration_description">Transliterator module helps you to transliterate text from any Indian language to any other Indian language.</string>
+    <string name="ngram_description">An n-gram model is a type of probabilistic model for predicting the next item in a sequence. n-grams are used in various areas of statistical natural language processing and genetic sequence analysis. An n-gram is a subsequence of n items from a given sequence. The items can be phonemes, syllables, letters, words or base pairs according to the application.</string>
+    <string name="shingling_description">A w-shingling is a set of unique \"shingles\"—contiguous subsequences of tokens in a document—that can be used to gauge the similarity of two documents. The w denotes the number of tokens in each shingle in the set.</string>
+    <string name="inexact_search_description">Inexact Search is a Fuzzy string search application. This module illustrates the combined use of Edit distance and Indic Soundex algorithm using which efficient string searching is obtained. This module is capable of cross language string search too.</string>
+    <string name="guess_language_description">Guess Language module is used for effectively determine natural language of a given text. It detects over 60 languages.</string>
+    <string name="text_similarity_description">Text Similarity module compares two texts for their similarity using cosine similarity. Based on the similarity it will give a number between 0 and 1. 1 means both text are similar. 0 means texts are completely different. A value in between 0 and 1 indicates how much they are similar.</string>
+    <string name="hyphenation_description">Hyphenation is the process inserting hyphens in between the syllables of a word so that when the text is justified, maximum space is utilized. This module is used to hyphenate a given text based on rules.</string>
+    <string name="uca_sort_description">Unicode Collation Algorithm(UCA) based sorting for all languages defined in Unicode. The collation weights used in this application is a modified version of Default Unicode Collation Element Table (DUCET). The current version is modified only for Malayalam language.</string>
+    <string name="spell_checker_description">Spell Checker module is used for determining correctness of a word. It also provides a list of possible suggestions for an incorrectly spelled word.</string>
+
     <string name="edittext_hint_enter_a_sentence">Enter a sentence here</string>
     <string name="edittext_hint_enter_a_word">Enter a word here</string>
 
@@ -52,8 +71,7 @@
     <string name="payyans_convert_text">Convert</string>
     <string name="payyans_textview_convert_result">Result : </string>
 
-    <string name="soundex_header_soundex_edittext">Soundex EditText</string>
-    <string name="soundex_header_soundex_textview">Soundex TextView - sample</string>
+    <string name="soundex_header_soundex_compare">Soundex compare</string>
     <string name="soundex_soundex_code_1">Soundex Code 1 :  </string>
     <string name="soundex_soundex_code_2">Soundex Code 2 :  </string>
     <string name="soundex_button_compare">Soundex compare</string>

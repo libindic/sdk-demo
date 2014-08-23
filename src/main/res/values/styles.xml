@@ -20,6 +20,7 @@
     <style name="RegularTextView">
         <item name="android:layout_height">@dimen/regular_text_view_size</item>
         <item name="android:textSize">@dimen/regular_text_size</item>
+        <item name="android:padding">@dimen/label_padding</item>
     </style>
 
     <style name="SampleTextView">

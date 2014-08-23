@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragment;
 
 import org.silpa.render.IndicEditText;
+import org.silpa.render.IndicTextView;
 import org.silpa.soundex.Soundex;
 
 /**
@@ -34,8 +35,8 @@ public class SoundexFragment extends SherlockFragment {
         final IndicEditText edtSoundex2 = (IndicEditText) view.findViewById(R.id.edtSoundex2);
         final Button btCompare = (Button) view.findViewById(R.id.btCompare);
 
-        final TextView tvSoundexCode1 = (TextView) view.findViewById(R.id.tvSoundexCode1);
-        final TextView tvSoundexCode2 = (TextView) view.findViewById(R.id.tvSoundexCode2);
+        final IndicTextView tvSoundexCode1 = (IndicTextView) view.findViewById(R.id.tvSoundexCode1);
+        final IndicTextView tvSoundexCode2 = (IndicTextView) view.findViewById(R.id.tvSoundexCode2);
         final TextView tvCompareResult = (TextView) view.findViewById(R.id.tvCompareResult);
 
         btCompare.setOnClickListener(new View.OnClickListener() {
