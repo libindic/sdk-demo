@@ -9,7 +9,8 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-import org.silpa.soundex.SoundexEditText;
+import org.silpa.render.IndicEditText;
+import org.silpa.soundex.Soundex;
 
 /**
  * Created by sujith on 10/6/14.
@@ -27,15 +28,28 @@ public class SoundexFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final SoundexEditText edtSoundex1 = (SoundexEditText) view.findViewById(R.id.edtSoundex1);
+        final Soundex soundex = new Soundex();
+
+        final IndicEditText edtSoundex1 = (IndicEditText) view.findViewById(R.id.edtSoundex1);
+        final IndicEditText edtSoundex2 = (IndicEditText) view.findViewById(R.id.edtSoundex2);
         final Button btCompare = (Button) view.findViewById(R.id.btCompare);
+
+        final TextView tvSoundexCode1 = (TextView) view.findViewById(R.id.tvSoundexCode1);
+        final TextView tvSoundexCode2 = (TextView) view.findViewById(R.id.tvSoundexCode2);
         final TextView tvCompareResult = (TextView) view.findViewById(R.id.tvCompareResult);
 
         btCompare.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                int cmp = edtSoundex1.getCompareValue();
+
+                String text1 = edtSoundex1.getText().toString();
+                String text2 = edtSoundex2.getText().toString();
+
+                tvSoundexCode1.setText(soundex.soundex(text1));
+                tvSoundexCode2.setText(soundex.soundex(text2));
+                int cmp = soundex.compare(text1, text2);
+
                 if (cmp == 0) tvCompareResult.setText("0  :  Strings equal");
                 else if (cmp == 1) tvCompareResult.setText("1  :  Strings sound phonetically same");
                 else if (cmp == 2)

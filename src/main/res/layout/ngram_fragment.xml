@@ -15,22 +15,9 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ngram_header_ngram_textview" />
-
-        <org.silpa.ngram.NgramTextView
-            style="@style/SampleTextView"
-            android:id="@+id/tvNgram"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ngram_textview_sample" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="@string/ngram_header_ngram_edittext" />
 
-        <org.silpa.ngram.NgramEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtNgram"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

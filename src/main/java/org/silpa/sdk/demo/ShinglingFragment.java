@@ -9,8 +9,9 @@ import android.widget.EditText;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
+import org.silpa.render.IndicEditText;
 import org.silpa.render.IndicTextView;
-import org.silpa.shingling.ShinglingEditText;
+import org.silpa.shingling.Shingling;
 
 /**
  * Created by sujith on 25/7/14.
@@ -28,7 +29,9 @@ public class ShinglingFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final ShinglingEditText edtShingling = (ShinglingEditText) view.findViewById(R.id.edtShingling);
+        final Shingling shingling = new Shingling();
+
+        final IndicEditText edtShingling = (IndicEditText) view.findViewById(R.id.edtShingling);
         final EditText edtWValue = (EditText) view.findViewById(R.id.edtWValue);
 
         final IndicTextView tvShingles = (IndicTextView) view.findViewById(R.id.tvShingles);
@@ -45,8 +48,9 @@ public class ShinglingFragment extends SherlockFragment {
                     wValue = 4;
                 }
 
-                edtShingling.setShingleSize(wValue);
-                tvShingles.setText(edtShingling.getShingles().toString());
+                tvShingles.setText(shingling.wshingling
+                        (edtShingling.getText().toString(), wValue).toString());
+
             }
         });
     }

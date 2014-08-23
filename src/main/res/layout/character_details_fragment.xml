@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="@string/character_details_header_chardetails_edittext" />
 
-        <org.silpa.characterdetails.CharacterDetailsEditText
+        <EditText
             android:id="@+id/edtCharDetails"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

@@ -15,18 +15,6 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/stemmer_header_stemmer_textview" />
-
-        <org.silpa.stemmer.StemmerTextView
-            style="@style/SampleTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/stemmer_textview_sample" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="@string/stemmer_header_stemmer_edittext" />
 
         <org.silpa.stemmer.StemmerEditText

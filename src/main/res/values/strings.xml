@@ -40,6 +40,7 @@
     <string name="katapayadi_header_katapayadi_edittext">Katapayadi EditText</string>
     <string name="katapayadi_header_katapayadi_textview">Katapayadi TextView - sample</string>
     <string name="katapayadi_katapayadi_number">Katapayadi number : </string>
+    <string name="katapayadi_button_get_number">Get Katapayadi Number</string>
     <string name="katapayadi_textview_sample">ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല</string>
 
     <string name="payyans_header_payyans_edittext">Payyans EditText</string>
@@ -68,6 +69,7 @@
     <string name="syllabifier_header_syllabifier_edittext">Syllabifier EditText</string>
     <string name="syllabifier_header_syllabifier_textview">Syllabifier TextView - sample</string>
     <string name="syllabifier_syllabified_text">Syllabified Text : </string>
+    <string name="syllabifier_button_syllabify">Syllabify</string>
     <string name="syllabifier_textview_sample">A syllable is a unit of organization for a sequence of speech sounds.</string>
 
     <string name="script_render_header_text_view">Indic TextView</string>

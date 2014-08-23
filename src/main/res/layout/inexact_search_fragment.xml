@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:inexactsearch="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="@dimen/layout_margin"
     android:layout_width="match_parent"
@@ -16,30 +15,17 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/inexact_search_header_inexact_search_textview" />
-
-        <org.silpa.inexactsearch.InexactSearchTextView
-            style="@style/SampleTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/inexact_search_textview_sample" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="@string/inexact_search_compare" />
 
-        <org.silpa.inexactsearch.InexactSearchEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtInexactSearch1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:hint="@string/edittext_hint_enter_a_word"
-            inexactsearch:inexactSearchReferenceField="@+id/edtInexactSearch2" />
+            android:hint="@string/edittext_hint_enter_a_word" />
 
-        <org.silpa.inexactsearch.InexactSearchEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtInexactSearch2"
             android:hint="@string/edittext_hint_enter_a_word"
             android:layout_marginTop="5dp"
@@ -74,16 +60,15 @@
             android:layout_height="wrap_content"
             android:text="@string/inexact_search_search" />
 
-        <org.silpa.inexactsearch.InexactSearchEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtInexactSearch3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:hint="@string/edittext_hint_enter_a_word"
-            inexactsearch:inexactSearchReferenceField="@+id/edtInexactSearch4" />
+            android:hint="@string/edittext_hint_enter_a_word" />
 
-        <org.silpa.inexactsearch.InexactSearchEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtInexactSearch4"
             android:hint="@string/inexact_search_edittext_hint_search"
             android:layout_marginTop="5dp"

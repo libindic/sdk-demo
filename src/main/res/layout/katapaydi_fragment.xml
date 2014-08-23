@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:katapayadi="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="@dimen/layout_margin"
     android:layout_width="match_parent"
@@ -16,47 +15,34 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/katapayadi_header_katapayadi_textview" />
-
-        <org.silpa.katapayadi.KatapayadiTextView
-            style="@style/SampleTextView"
-            android:id="@+id/tvKatapayadi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/katapayadi_textview_sample" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="@string/katapayadi_header_katapayadi_edittext" />
 
-        <org.silpa.katapayadi.KatapayadiEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtKatapayadi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/edittext_hint_enter_a_word"
-            katapayadi:katapayadiOutputTo="@+id/tvKatapayadiOutput" />
+            android:hint="@string/edittext_hint_enter_a_word" />
 
-        <LinearLayout
-            android:layout_margin="@dimen/layout_margin"
-            android:orientation="horizontal"
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btGetKatapayadiNumber"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="@string/katapayadi_button_get_number" />
 
-            <TextView
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/katapayadi_katapayadi_number" />
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/katapayadi_katapayadi_number" />
 
-            <TextView
-                android:id="@+id/tvKatapayadiOutput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvKatapayadiOutput"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </ScrollView>

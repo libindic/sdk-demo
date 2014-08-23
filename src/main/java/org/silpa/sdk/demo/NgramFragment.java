@@ -10,7 +10,7 @@ import android.widget.EditText;
 import com.actionbarsherlock.app.SherlockFragment;
 
 import org.silpa.ngram.Ngram;
-import org.silpa.ngram.NgramEditText;
+import org.silpa.render.IndicEditText;
 import org.silpa.render.IndicTextView;
 
 /**
@@ -29,7 +29,9 @@ public class NgramFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final NgramEditText edtNgram = (NgramEditText) view.findViewById(R.id.edtNgram);
+        final Ngram ngram = new Ngram();
+
+        final IndicEditText edtNgram = (IndicEditText) view.findViewById(R.id.edtNgram);
         final EditText edtNValue = (EditText) view.findViewById(R.id.edtNValue);
 
 
@@ -49,16 +51,13 @@ public class NgramFragment extends SherlockFragment {
                 } catch (Exception e) {
                     nValue = Ngram.DEFAULT_NGRAMS_WINDOW_SIZE;
                 }
+                String text = edtNgram.getText().toString();
 
-                edtNgram.setNgramNValue(nValue);
-                edtNgram.setNgramType(Ngram.NGRAM_TYPE_LETTER);
-                tvLetterNgram.setText(edtNgram.getNgram().toString());
+                tvLetterNgram.setText(ngram.letterNgram(text, nValue).toString());
 
-                edtNgram.setNgramType(Ngram.NGRAM_TYPE_SYLLABLE);
-                tvSyllableNgram.setText(edtNgram.getNgram().toString());
+                tvSyllableNgram.setText(ngram.syllableNgram(text, nValue).toString());
 
-                edtNgram.setNgramType(Ngram.NGRAM_TYPE_WORD);
-                tvWordNgram.setText(edtNgram.getNgram().toString());
+                tvWordNgram.setText(ngram.wordNgram(text, nValue).toString());
             }
         });
     }

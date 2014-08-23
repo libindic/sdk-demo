@@ -9,7 +9,8 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-import org.silpa.inexactsearch.InexactSearchEditText;
+import org.silpa.inexactsearch.InexactSearch;
+import org.silpa.render.IndicEditText;
 
 import java.util.Map;
 
@@ -29,15 +30,19 @@ public class InexactSearchFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final InexactSearchEditText edtInexactSearch1 = (InexactSearchEditText) view.findViewById(R.id.edtInexactSearch1);
-        //final InexactSearchEditText edtInexactSearch2 = (InexactSearchEditText) view.findViewById(R.id.edtInexactSearch2);
+        final InexactSearch inexactSearch = new InexactSearch();
+
+        final IndicEditText edtInexactSearch1 = (IndicEditText) view.findViewById(R.id.edtInexactSearch1);
+        final IndicEditText edtInexactSearch2 = (IndicEditText) view.findViewById(R.id.edtInexactSearch2);
         final TextView tvInexactSearchCompare = (TextView) view.findViewById(R.id.tvInexactSearchCompare);
         final Button btInexactSearchCompare = (Button) view.findViewById(R.id.btInexactSearchCompare);
         btInexactSearchCompare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double compareValue = edtInexactSearch1.getCompareValue();
-                double bigramAverage = edtInexactSearch1.getBigramAverage();
+                double compareValue = inexactSearch.compare(edtInexactSearch1.getText().toString(),
+                        edtInexactSearch2.getText().toString());
+                double bigramAverage = inexactSearch.bigramAverage(edtInexactSearch1.getText().toString(),
+                        edtInexactSearch2.getText().toString());
 
                 String res = "";
                 res += "Compare value : " + compareValue + "\n";
@@ -47,14 +52,16 @@ public class InexactSearchFragment extends SherlockFragment {
         });
 
 
-        final InexactSearchEditText edtInexactSearch3 = (InexactSearchEditText) view.findViewById(R.id.edtInexactSearch3);
-        //final InexactSearchEditText edtInexactSearch4 = (InexactSearchEditText) view.findViewById(R.id.edtInexactSearch4);
+        final IndicEditText edtInexactSearch3 = (IndicEditText) view.findViewById(R.id.edtInexactSearch3);
+        final IndicEditText edtInexactSearch4 = (IndicEditText) view.findViewById(R.id.edtInexactSearch4);
         final TextView tvInexactSearchSearch = (TextView) view.findViewById(R.id.tvInexactSearchSearch);
         final Button btInexactSearchSearch = (Button) view.findViewById(R.id.btInexactSearchSearch);
         btInexactSearchSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Map<String, Double> searchResults = edtInexactSearch3.getSearchResults();
+                Map<String, Double> searchResults = inexactSearch.search(
+                        edtInexactSearch3.getText().toString(),
+                        edtInexactSearch4.getText().toString());
 
                 String res = "";
                 for (Map.Entry<String, Double> entry : searchResults.entrySet()) {

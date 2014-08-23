@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:syllabifier="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="@dimen/layout_margin"
     android:layout_width="match_parent"
@@ -16,46 +15,34 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/syllabifier_header_syllabifier_textview" />
-
-        <org.silpa.syllabifier.SyllabifierTextView
-            style="@style/SampleTextView"
-            android:id="@+id/tvSyllabifier"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/syllabifier_textview_sample" />
-
-        <TextView
-            style="@style/HeaderTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="@string/syllabifier_header_syllabifier_edittext" />
 
-        <org.silpa.syllabifier.SyllabifierEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtSyllabifier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/edittext_hint_enter_a_sentence"
-            syllabifier:syllabifierOutputTo="@+id/tvSyllabifierOutput" />
+            android:hint="@string/edittext_hint_enter_a_sentence" />
 
-        <LinearLayout
-            android:layout_margin="@dimen/layout_margin"
-            android:orientation="horizontal"
+        <Button
+            style="@style/RegularButton"
+            android:id="@+id/btSyllabify"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="@string/syllabifier_button_syllabify" />
 
-            <TextView
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/syllabifier_syllabified_text" />
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/syllabifier_syllabified_text" />
 
-            <org.silpa.render.IndicTextView
-                android:id="@+id/tvSyllabifierOutput"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
+        <org.silpa.render.IndicTextView
+            style="@style/RegularTextView"
+            android:id="@+id/tvSyllabifiedText"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </ScrollView>

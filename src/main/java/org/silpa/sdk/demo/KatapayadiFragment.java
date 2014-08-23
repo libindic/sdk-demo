@@ -4,8 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
+
+import org.silpa.katapayadi.Katapayadi;
+import org.silpa.render.IndicEditText;
 
 /**
  * Created by sujith on 10/6/14.
@@ -23,9 +28,19 @@ public class KatapayadiFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-//        final KatapayadiTextView tvKatapayadi = (KatapayadiTextView) view.findViewById(R.id.tvKatapayadi);
-//        System.out.println(tvKatapayadi.getKatapayadiNumber());
-//        System.out.println(tvKatapayadi.getSwarasthanas());
+        final Katapayadi katapayadi = new Katapayadi();
+
+        final IndicEditText edtKatapayadi = (IndicEditText) view.findViewById(R.id.edtKatapayadi);
+        final Button btGetKatapayadiNumber = (Button) view.findViewById(R.id.btGetKatapayadiNumber);
+        final TextView tvKatapayadiOutput = (TextView) view.findViewById(R.id.tvKatapayadiOutput);
+
+        btGetKatapayadiNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String num = katapayadi.getKatapayadiNumber(edtKatapayadi.getText().toString());
+                tvKatapayadiOutput.setText(num);
+            }
+        });
 
     }
 }
