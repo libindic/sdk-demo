@@ -27,7 +27,7 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/syllabifier_header_syllabifier_edittext" />
+            android:text="@string/syllabifier_header" />
 
         <org.silpa.render.IndicEditText
             android:id="@+id/edtSyllabifier"

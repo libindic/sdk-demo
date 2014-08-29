@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
@@ -37,6 +38,11 @@ public class UCASortFragment extends SherlockFragment {
             public void onClick(View view) {
 
                 String text = edtUCAInput.getText().toString();
+
+                if (text == null || text.length() == 0) {
+                    showWarning();
+                }
+
                 String[] sortedWords = UCASort.sort(text);
 
                 String res = "[ ";
@@ -48,6 +54,10 @@ public class UCASortFragment extends SherlockFragment {
                 tvSortResults.setText(res);
             }
         });
+    }
+
+    private void showWarning() {
+        Toast.makeText(getActivity(), "Warning : Empty fields.", Toast.LENGTH_SHORT).show();
     }
 }
 

@@ -27,7 +27,7 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shingling_header_shingling_edittext" />
+            android:text="@string/shingling_header" />
 
         <org.silpa.render.IndicEditText
             android:id="@+id/edtShingling"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="@string/shingling_textview_word_shingles" />
 
-        <org.silpa.render.IndicTextView
+        <TextView
             style="@style/RegularTextView"
             android:id="@+id/tvShingles"
             android:layout_margin="@dimen/layout_margin"

@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="@string/stemmer_header_stemmer_edittext" />
 
-        <org.silpa.stemmer.StemmerEditText
+        <org.silpa.render.IndicEditText
             android:id="@+id/edtStemmer"
             android:hint="@string/edittext_hint_enter_a_sentence"
             android:layout_width="fill_parent"

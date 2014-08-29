@@ -27,7 +27,7 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ngram_header_ngram_edittext" />
+            android:text="@string/ngram_header" />
 
         <org.silpa.render.IndicEditText
             android:id="@+id/edtNgram"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ngram_textview_letter_ngram" />
 
-        <org.silpa.render.IndicTextView
+        <TextView
             style="@style/RegularTextView"
             android:id="@+id/tvLetterNgram"
             android:layout_margin="@dimen/layout_margin"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ngram_textview_word_ngram" />
 
-        <org.silpa.render.IndicTextView
+        <TextView
             style="@style/RegularTextView"
             android:id="@+id/tvWordNgram"
             android:layout_margin="@dimen/layout_margin"
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ngram_textview_syllable_ngram" />
 
-        <org.silpa.render.IndicTextView
+        <TextView
             style="@style/RegularTextView"
             android:id="@+id/tvSyllableNgram"
             android:layout_margin="@dimen/layout_margin"

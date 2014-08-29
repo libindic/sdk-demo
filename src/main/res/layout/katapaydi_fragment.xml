@@ -27,7 +27,7 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/katapayadi_header_katapayadi_edittext" />
+            android:text="@string/katapayadi_header" />
 
         <org.silpa.render.IndicEditText
             android:id="@+id/edtKatapayadi"

@@ -5,8 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 import org.silpa.render.IndicEditText;
 import org.silpa.render.IndicTextView;
@@ -17,10 +21,16 @@ import org.silpa.syllabifier.Syllabifier;
  */
 public class SyllabifierFragment extends SherlockFragment {
 
+    private Syllabifier syllabifier;
+
+    private IndicEditText edtSyllabifier;
+    private Button btSyllabify;
+    private IndicTextView tvSyllabifiedText;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.syllabifier_fragment, container, false);
         initView(view);
         return view;
@@ -28,21 +38,69 @@ public class SyllabifierFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final Syllabifier syllabifier = new Syllabifier();
+        syllabifier = new Syllabifier();
 
-        final IndicEditText edtSyllabifier = (IndicEditText)
+        edtSyllabifier = (IndicEditText)
                 view.findViewById(R.id.edtSyllabifier);
-        final Button btSyllabify = (Button) view.findViewById(R.id.btSyllabify);
-        final IndicTextView tvSyllabifiedText = (IndicTextView)
+        btSyllabify = (Button) view.findViewById(R.id.btSyllabify);
+        tvSyllabifiedText = (IndicTextView)
                 view.findViewById(R.id.tvSyllabifiedText);
-
 
         btSyllabify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvSyllabifiedText.setText(syllabifier.syllabify(edtSyllabifier.getText().toString()));
+
+                String text = edtSyllabifier.getText().toString();
+
+                if (text == null || text.length() == 0) {
+                    showWarning();
+                }
+
+                tvSyllabifiedText.setText(syllabifier.syllabify(text));
             }
         });
+    }
 
+    private void showWarning() {
+        Toast.makeText(getActivity(), "Warning : Empty fields.", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu, inflater);
+
+        inflater.inflate(R.menu.menu_fill_sample_data, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_fill_sample_fields:
+                fillSampleData();
+                return true;
+
+            case R.id.menu_clear_fields:
+                clearFields();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void fillSampleData() {
+        if (edtSyllabifier != null) {
+            edtSyllabifier.setText(R.string.syllabifier_sample_1);
+
+            if (btSyllabify != null && tvSyllabifiedText != null) {
+                btSyllabify.performClick();
+            }
+        }
+    }
+
+    private void clearFields() {
+        if (edtSyllabifier != null && tvSyllabifiedText != null) {
+            edtSyllabifier.setText("");
+            tvSyllabifiedText.setText("");
+        }
     }
 }

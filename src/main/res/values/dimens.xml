@@ -11,5 +11,8 @@
     <dimen name="regular_text_view_size">30dp</dimen>
     <dimen name="regular_button_size">40dp</dimen>
     <dimen name="sample_textview_margin">10dp</dimen>
+    <dimen name="table_row_textview_margin">1dp</dimen>
+    <dimen name="table_row_textview_padding">4dp</dimen>
+    <dimen name="table_row_textview_text_size">17dp</dimen>
 
 </resources>

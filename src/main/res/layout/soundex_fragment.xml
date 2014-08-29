@@ -27,7 +27,7 @@
             style="@style/HeaderTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/soundex_header_soundex_compare" />
+            android:text="@string/soundex_header" />
 
         <org.silpa.render.IndicEditText
             android:id="@+id/edtSoundex1"

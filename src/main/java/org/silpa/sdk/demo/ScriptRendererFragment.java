@@ -3,7 +3,6 @@ package org.silpa.sdk.demo;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +14,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 import org.silpa.render.IndicEditText;
 import org.silpa.render.ScriptRenderer;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,10 +31,18 @@ import java.util.Map;
  */
 public class ScriptRendererFragment extends SherlockFragment {
 
+    private ScriptRenderer scriptRenderer;
+
+    private IndicEditText edtIndicText;
+    private EditText edtWidth, edtHeight, edtFontSize;
+    private Spinner spRenderColor;
+    private Button btGetImage;
+    private ImageView ivRenderedImage;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.script_renderer_fragment, container, false);
         initView(view);
         return view;
@@ -62,15 +70,15 @@ public class ScriptRendererFragment extends SherlockFragment {
 
     private void initView(View view) {
 
-        final ScriptRenderer obj = new ScriptRenderer(getSherlockActivity());
+        scriptRenderer = new ScriptRenderer(getActivity());
 
-        final IndicEditText edtIndicText = (IndicEditText) view.findViewById(R.id.edtRenderInput);
-        final EditText edtWidth = (EditText) view.findViewById(R.id.edtRenderWidth);
-        final EditText edtHeight = (EditText) view.findViewById(R.id.edtRenderHeight);
-        final EditText edtFontSize = (EditText) view.findViewById(R.id.edtRenderFontSize);
-        final Spinner spRenderColor = (Spinner) view.findViewById(R.id.spRenderColor);
-        final Button btGetImage = (Button) view.findViewById(R.id.btGetRenderImage);
-        final ImageView ivRenderedImage = (ImageView) view.findViewById(R.id.ivRenderedImage);
+        edtIndicText = (IndicEditText) view.findViewById(R.id.edtRenderInput);
+        edtWidth = (EditText) view.findViewById(R.id.edtRenderWidth);
+        edtHeight = (EditText) view.findViewById(R.id.edtRenderHeight);
+        edtFontSize = (EditText) view.findViewById(R.id.edtRenderFontSize);
+        spRenderColor = (Spinner) view.findViewById(R.id.spRenderColor);
+        btGetImage = (Button) view.findViewById(R.id.btGetRenderImage);
+        ivRenderedImage = (ImageView) view.findViewById(R.id.ivRenderedImage);
 
         ArrayAdapter<String> dataAdapterFontMap = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_spinner_item, listColor);
@@ -85,7 +93,7 @@ public class ScriptRendererFragment extends SherlockFragment {
                 int height = getValue(edtHeight, DEFAULT_HEIGHT);
                 int fontSize = getValue(edtFontSize, DEFAULT_FONT_SIZE);
 
-                Bitmap bitmap = obj.getRenderedBitmap(text, fontSize,
+                Bitmap bitmap = scriptRenderer.getRenderedBitmap(text, fontSize,
                         colorMap.get(listColor.get(spRenderColor.getSelectedItemPosition())), height, width);
                 try {
                     ivRenderedImage.setImageBitmap(bitmap);
@@ -94,29 +102,73 @@ public class ScriptRendererFragment extends SherlockFragment {
                 }
             }
         });
-
-//        Bitmap bitmap = obj.getRenderedBitmap(text, fontSize,
-//                colorMap.get(listColor.get(spRenderColor.getSelectedItemPosition())), height, width);
-//        File file = new File(Environment.getExternalStorageDirectory() + "/render.png");
-//        try {
-//            bitmap.compress(Bitmap.CompressFormat.PNG, 100, new FileOutputStream(file));
-//            Toast.makeText(getSherlockActivity(), "Image saved", Toast.LENGTH_LONG).show();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            Toast.makeText(getSherlockActivity(), "Error in generating bitmap", Toast.LENGTH_LONG).show();
-//        }
     }
 
-    private static final int DEFAULT_WIDTH = 100;
-    private static final int DEFAULT_HEIGHT = 100;
-    private static final int DEFAULT_FONT_SIZE = 18;
+    private static final int DEFAULT_WIDTH = 400;
+    private static final int DEFAULT_HEIGHT = 125;
+    private static final int DEFAULT_FONT_SIZE = 50;
 
-    private static int getValue(EditText edt, int defaultValue) {
+    private int getValue(EditText edt, int defaultValue) {
         try {
-            int val = Integer.parseInt(edt.getText().toString().trim());
+            String num = edt.getText().toString().trim();
+            if (num == null || num.length() == 0) {
+                showWarning("Warning : Empty fields");
+            }
+            int val = Integer.parseInt(num);
             return val;
         } catch (NumberFormatException nfe) {
+            showWarning("Warning : Integer values expected");
             return defaultValue;
+        }
+    }
+
+    private void showWarning(String warningText) {
+        Toast.makeText(getActivity(), warningText, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu, inflater);
+
+        inflater.inflate(R.menu.menu_fill_sample_data, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_fill_sample_fields:
+                fillSampleData();
+                return true;
+
+            case R.id.menu_clear_fields:
+                clearFields();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void fillSampleData() {
+        if (edtIndicText != null && edtWidth != null && edtHeight != null && edtFontSize != null) {
+            edtIndicText.setText(R.string.script_render_sample_1);
+            edtWidth.setText(String.valueOf(DEFAULT_WIDTH));
+            edtHeight.setText(String.valueOf(DEFAULT_HEIGHT));
+            edtFontSize.setText(String.valueOf(DEFAULT_FONT_SIZE));
+
+            if (btGetImage != null && ivRenderedImage != null) {
+                btGetImage.performClick();
+            }
+        }
+    }
+
+    private void clearFields() {
+        if (edtIndicText != null && edtWidth != null && edtHeight != null &&
+                edtFontSize != null && ivRenderedImage != null) {
+            edtIndicText.setText("");
+            edtWidth.setText("");
+            edtHeight.setText("");
+            edtFontSize.setText("");
+            ivRenderedImage.setImageBitmap(null);
         }
     }
 }

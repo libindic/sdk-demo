@@ -29,17 +29,18 @@
             android:layout_height="wrap_content"
             android:text="@string/payyans_header_general" />
 
-        <TextView
-            style="@style/LabelTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/payyans_label_enter_text" />
-
-        <org.silpa.payyans.PayyansEditText
-            android:id="@+id/edtPayyansInput1"
+        <org.silpa.render.IndicEditText
+            android:id="@+id/edtPayyans"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/edittext_hint_enter_a_sentence" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payyans_label_font_map" />
 
         <Spinner
             android:id="@+id/spinnerFontMap"
@@ -47,6 +48,13 @@
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payyans_label_direction_conversion" />
 
         <Spinner
             android:id="@+id/spinnerDirection"
@@ -71,7 +79,7 @@
 
         <org.silpa.render.IndicTextView
             style="@style/RegularTextView"
-            android:id="@+id/tvPayyansOutput1"
+            android:id="@+id/tvPayyans"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 

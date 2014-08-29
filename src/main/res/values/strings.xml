@@ -23,12 +23,16 @@
     <string name="drawer_open">Open Navigational Drawer</string>
     <string name="drawer_close">Close Navigational Drawer</string>
 
+    <string name="string_fill_sample_data">Sample input</string>
+    <string name="string_clear_fields">Clear</string>
+
     <string name="description_header">Description</string>
     <string name="soundex_description">Soundex is a phonetic indexing algorithm. It is used to search/retrieve words having similar pronunciation but slightly different spelling. The soundex code for a word is an english alphabet followed by a number of digits. This module provides indic soundex algorithm based soundex codes for a word.</string>
     <string name="payyans_description">Payyans is a module used for converting ASCII font specific data into Unicode and vice versa.</string>
     <string name="katapayadi_description">Katapayadi sankhya is a simplification of Aryabhata\'s Sanskrit numerals, due probably to Haridatta from Kerala. In Malayalam it is also known as \'Paralperu\'. This module is used to generate Katapayadi number for a given word.</string>
     <string name="stemmer_description">Stemmer is used to stem the words in the given text. This uses a rule based approach.</string>
-    <string name="script_renderer_description">Script Render modules is used to support constant rendering of Indic complex scripts.</string>
+    <string name="script_renderer_description">Script Render module is used to support constant rendering of Indic complex scripts.</string>
+    <string name="script_renderer_render_description">This is used to create a bitmap of specified height, width, font size and color for a given text.</string>
     <string name="character_details_description">Character Details module is used to get unicode character details.</string>
     <string name="fortune_description">Fortune module is used to get a random quote.</string>
     <string name="syllabifier_description">Syllabifier module is used to split a given text into syllables which are units of organization for a sequence of speech sounds. Language of each word will be detected. Works on Malayalam, Kannada, Bengali, Tamil and Hindi.</string>
@@ -42,56 +46,75 @@
     <string name="uca_sort_description">Unicode Collation Algorithm(UCA) based sorting for all languages defined in Unicode. The collation weights used in this application is a modified version of Default Unicode Collation Element Table (DUCET). The current version is modified only for Malayalam language.</string>
     <string name="spell_checker_description">Spell Checker module is used for determining correctness of a word. It also provides a list of possible suggestions for an incorrectly spelled word.</string>
 
+    <string name="hindi">हिन्दी</string>
+    <string name="malayalam">മലയാളം</string>
+    <string name="kannada">ಕನ್ನಡ</string>
+    <string name="tamil">தமிழ்</string>
+    <string name="telugu">తెలుగు</string>
+    <string name="bengali">বাংলা</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="punjabi">ਪੰਜਾਬੀ</string>
+    <string name="oriya">ଓଡ଼ିଆ</string>
+
+    <string name="hindi_language">Hindi</string>
+    <string name="malayalam_language">Malayalam</string>
+    <string name="kannada_language">Kannada</string>
+    <string name="tamil_language">Tamil</string>
+    <string name="telugu_language">Telugu</string>
+    <string name="bengali_language">Bengali</string>
+    <string name="gujarati_language">Gujarathi</string>
+    <string name="punjabi_language">Punjabi</string>
+    <string name="oriya_language">Oriya</string>
+
     <string name="edittext_hint_enter_a_sentence">Enter a sentence here</string>
     <string name="edittext_hint_enter_a_word">Enter a word here</string>
 
-    <string name="character_details_header_chardetails_edittext">Character Details EditText</string>
-    <string name="character_details_header_chardetails_textview">Character Details TextView - sample </string>
-    <string name="character_details_textview_sample"></string>
+    <string name="character_details_header">Character Details</string>
     <string name="character_details_textview_details">Character details : </string>
     <string name="character_details_button_details">Get details</string>
     <string name="character_details_edittext_hint">Enter characters here</string>
+    <string name="character_details_sample_1">$V.#ऐকਕઔଓஒகఖಕഌ௧৪</string>
 
     <string name="fortune_header_fortune_textview_sample_1">Fortune TextView - sample 1</string>
     <string name="fortune_header_fortune_textview_sample_2">Fortune TextView - sample 2</string>
     <string name="fortune_header_fortune_textview_sample_3">Fortune TextView - sample 3</string>
 
-    <string name="katapayadi_header_katapayadi_edittext">Katapayadi EditText</string>
-    <string name="katapayadi_header_katapayadi_textview">Katapayadi TextView - sample</string>
+    <string name="katapayadi_header">Katapayadi</string>
     <string name="katapayadi_katapayadi_number">Katapayadi number : </string>
     <string name="katapayadi_button_get_number">Get Katapayadi Number</string>
-    <string name="katapayadi_textview_sample">ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല</string>
+    <string name="katapayadi_sample_1">ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല</string>
 
     <string name="payyans_header_payyans_edittext">Payyans EditText</string>
     <string name="payyans_header_general">Payyans conversion</string>
-    <string name="payyans_label_enter_text_ASCII2Unicode">Enter text - ASCII To Unicode</string>
-    <string name="payyans_label_enter_text_Unicode2ASCII">Enter text - Unicode To ASCII</string>
-    <string name="payyans_label_enter_text">Enter text to convert</string>
     <string name="payyans_converted_text">Converted Text : </string>
     <string name="payyans_convert_text">Convert</string>
     <string name="payyans_textview_convert_result">Result : </string>
+    <string name="payyans_label_font_map">Choose font map</string>
+    <string name="payyans_label_direction_conversion">Choose direction on conversion</string>
+    <string name="payyans_sample_1">hello</string>
 
-    <string name="soundex_header_soundex_compare">Soundex compare</string>
-    <string name="soundex_soundex_code_1">Soundex Code 1 :  </string>
-    <string name="soundex_soundex_code_2">Soundex Code 2 :  </string>
-    <string name="soundex_button_compare">Soundex compare</string>
+    <string name="soundex_header">Soundex</string>
+    <string name="soundex_soundex_code_1">Soundex word 1 :  </string>
+    <string name="soundex_soundex_code_2">Soundex word 2 :  </string>
+    <string name="soundex_button_compare">Compare words</string>
     <string name="soundex_textview_compare_result">Result : </string>
-    <string name="soundex_textview_sample">ಬೆಂಗಳೂರು</string>
+    <string name="soundex_sample_1">ಬೆಂಗಳೂರು</string>
+    <string name="soundex_sample_2">बेंगलुरु</string>
 
     <string name="stemmer_header_stemmer_edittext">Stemmer EditText</string>
     <string name="stemmer_header_stemmer_textview">Stemmer TextView - sample </string>
-    <string name="stemmer_textview_sample">തുറക്കുന്ന</string>
     <string name="stemmer_textview_stem_words">Stemmed words : </string>
     <string name="stemmer_button_stem_words">Stem words</string>
+    <string name="stemmer_sample_1">തുറക്കുന്ന</string>
 
-    <string name="syllabifier_header_syllabifier_edittext">Syllabifier EditText</string>
-    <string name="syllabifier_header_syllabifier_textview">Syllabifier TextView - sample</string>
+    <string name="syllabifier_header">Syllabifier</string>
     <string name="syllabifier_syllabified_text">Syllabified Text : </string>
     <string name="syllabifier_button_syllabify">Syllabify</string>
-    <string name="syllabifier_textview_sample">A syllable is a unit of organization for a sequence of speech sounds.</string>
+    <string name="syllabifier_sample_1">A syllable is a unit of \norganization for a \nsequence of speech sounds.</string>
 
     <string name="script_render_header_text_view">Indic TextView</string>
     <string name="script_render_header_edittext">Indic EditText</string>
+    <string name="script_render_language">Language</string>
     <string name="script_render_with_renderer">With script renderer</string>
     <string name="script_render_without_renderer">Default rendering</string>
     <string name="script_render_text_view_sample_1">हिन्दी    മലയാളം    বাংলা</string>
@@ -103,49 +126,56 @@
     <string name="script_render_edittext_hint_font_size">Size</string>
     <string name="script_render_button_get_image">Get Image</string>
     <string name="script_render_textview_image_result">Rendered Image : </string>
+    <string name="script_render_sample_1">Punjabi - ਪੰਜਾਬੀ\nGujarati - ગુજરાતી </string>
 
-    <string name="ngram_header_ngram_edittext">Ngram EditText</string>
-    <string name="ngram_header_ngram_textview">Ngram TextView - sample </string>
-    <string name="ngram_textview_sample">catterpillar</string>
+    <string name="ngram_header">Ngram</string>
     <string name="ngram_edittext_hint_n_value">Enter N value (Default - 2)</string>
     <string name="ngram_textview_letter_ngram">Letter N-gram : </string>
     <string name="ngram_textview_syllable_ngram">Syllable N-gram : </string>
     <string name="ngram_textview_word_ngram">Word N-gram : </string>
     <string name="ngram_button_get_n_grams">Get N-grams</string>
+    <string name="ngram_sample_1">catterpillar</string>
+    <string name="ngram_sample_2">2</string>
 
-    <string name="shingling_header_shingling_edittext">Shingling EditText</string>
-    <string name="shingling_header_shingling_textview">Shingling TextView - sample </string>
-    <string name="shingling_textview_sample">a rose is a rose is a rose</string>
+    <string name="shingling_header">Shingling</string>
     <string name="shingling_edittext_hint_w_value">Enter W value (Default - 4)</string>
     <string name="shingling_button_get_shingles">Get Shingles</string>
     <string name="shingling_textview_word_shingles">Shingles : </string>
+    <string name="shingling_sample_1">a rose is a rose is a rose</string>
+    <string name="shingling_sample_2">4</string>
 
-    <string name="inexact_search_header_inexact_search_edittext">Inexact Search EditText</string>
-    <string name="inexact_search_header_inexact_search_textview">Inexact Search TextView - sample </string>
+    <string name="inexact_search_header">Inexact Search</string>
     <string name="inexact_search_textview_sample">ஸில்பா</string>
-    <string name="inexact_search_compare">Inexact Search EditText - Compare</string>
+    <string name="inexact_search_compare">Inexact Search - Compare</string>
     <string name="inexact_search_button_compare">Compare</string>
-    <string name="inexact_search_compare_result">Compare : </string>
-    <string name="inexact_search_search">Inexact Search EditText - Search</string>
+    <string name="inexact_search_compare_result">Compare value : </string>
+    <string name="inexact_search_search">Inexact Search - Search</string>
     <string name="inexact_search_button_search">Search</string>
     <string name="inexact_search_search_result">Result : </string>
     <string name="inexact_search_edittext_hint_search">Enter word to search</string>
+    <string name="inexact_search_compare_sample_1">ಮಾವಿನ ಹಣ್ಣು</string>
+    <string name="inexact_search_compare_sample_2">माविन हण्णु </string>
+    <string name="inexact_search_search_sample_1">नमस्कार सिल्पा की दुनिया में \nआपका स्वागत है</string>
+    <string name="inexact_search_search_sample_2">സില്പാ</string>
 
     <string name="guess_language_header">Guess Language</string>
     <string name="guess_language_textview_details">Language details : </string>
     <string name="guess_language_button_get_language">Get Language</string>
     <string name="guess_language_note">(Enter atleast 20 characters for good accuracy)</string>
+    <string name="guess_language_sample_1">സ്വതന്ത്ര മലയാളം കമ്പ്യൂട്ടിങ്ങ്</string>
 
     <string name="transliteration_header_transliterator_edittext">Transliteration EditText</string>
     <string name="transliteration_header_transliterator_textview">Transliteration TextView - sample</string>
-    <string name="transliteration_textview_sample">नमस्कार सिल्पा की दुनिया में आपका स्वागत है</string>
     <string name="transliteration_button_transliterate">Transliterate</string>
     <string name="transliteration_textview_transliterated_text">Transliterated text : </string>
     <string name="transliteration_textview_self_transliteration">Self Transliteration - sample (Malayalam)</string>
+    <string name="transliteration_sample_1">नमस्कार सिल्पा की दुनिया में \nआपका स्वागत है</string>
 
     <string name="text_similarity_header">Text Similarity</string>
     <string name="text_similarity_compare_results">Compare value : </string>
     <string name="text_similarity_button_compare">Compare</string>
+    <string name="text_similarity_sample_1">Julie loves me more than Linda loves me</string>
+    <string name="text_similarity_sample_2">Jane likes me more than Julie loves me</string>
 
     <string name="uca_sort_header">UCA Sort</string>
     <string name="uca_sort_results">Sort results : </string>
@@ -155,7 +185,7 @@
     <string name="hyphenation_without_hyphenation">Without Hyphenation</string>
     <string name="hyphenation_with_hyphenation_sample_1">Hyphenation - sample</string>
 
-    <string name="spell_checker_header_spell_check">Spell-check</string>
+    <string name="spell_checker_header">Spell-check</string>
     <string name="spell_checker_button_check_correctness">Check correctness</string>
     <string name="spell_checker_textview_correctness">Correctness : </string>
     <string name="spell_checker_header_suggestions">Suggestions</string>
@@ -164,5 +194,8 @@
     <string name="spell_checker_header_mispelt_words">Misspelt words</string>
     <string name="spell_checker_button_get_mispelt_words">Get misspelt words</string>
     <string name="spell_checker_textview_mispelt_words">Misspelt words : </string>
+    <string name="spell_checker_sample_1">Judecious</string>
+    <string name="spell_checker_sample_2">speling</string>
+    <string name="spell_checker_sample_3">The quck brwn fox jups ovr the lzy dog</string>
 
 </resources>
