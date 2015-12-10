@@ -1,28 +1,26 @@
-package org.silpa.sdk.demo;
+package org.libindic.demo;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-
-import org.silpa.render.IndicEditText;
-import org.silpa.stemmer.Stemmer;
-import org.silpa.stemmer.StemmerEditText;
+import org.libindic.render.IndicEditText;
+import org.libindic.stemmer.Stemmer;
 
 import java.util.Map;
 
 /**
  * Created by sujith on 10/6/14.
  */
-public class StemmerFragment extends SherlockFragment {
+public class StemmerFragment extends Fragment {
 
     private Stemmer stemmer;
 

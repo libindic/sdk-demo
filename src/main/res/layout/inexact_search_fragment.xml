@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="@string/inexact_search_compare" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtInexactSearch1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:layout_marginBottom="5dp"
             android:hint="@string/edittext_hint_enter_a_word" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtInexactSearch2"
             android:hint="@string/edittext_hint_enter_a_word"
             android:layout_marginTop="5dp"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:text="@string/inexact_search_search" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtInexactSearch3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             android:layout_marginBottom="5dp"
             android:hint="@string/edittext_hint_enter_a_word" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtInexactSearch4"
             android:hint="@string/inexact_search_edittext_hint_search"
             android:layout_marginTop="5dp"
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:text="@string/inexact_search_search_result" />
 
-        <org.silpa.render.IndicTextView
+        <org.libindic.render.IndicTextView
             style="@style/RegularTextView"
             android:id="@+id/tvInexactSearchSearch"
             android:layout_margin="@dimen/layout_margin"

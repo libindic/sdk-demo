@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="@string/stemmer_header_stemmer_edittext" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtStemmer"
             android:hint="@string/edittext_hint_enter_a_sentence"
             android:layout_width="fill_parent"
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:text="@string/stemmer_textview_stem_words" />
 
-        <org.silpa.render.IndicTextView
+        <org.libindic.render.IndicTextView
             style="@style/RegularTextView"
             android:id="@+id/tvStemmedWords"
             android:layout_width="fill_parent"

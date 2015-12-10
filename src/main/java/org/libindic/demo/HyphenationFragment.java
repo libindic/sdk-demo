@@ -1,19 +1,18 @@
-package org.silpa.sdk.demo;
+package org.libindic.demo;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
-import org.silpa.hyphenation.text.Hyphenator;
+import org.libindic.hyphenation.text.Hyphenator;
 
 /**
  * Created by sujith on 26/8/14.
  */
-public class HyphenationFragment extends SherlockFragment {
+public class HyphenationFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

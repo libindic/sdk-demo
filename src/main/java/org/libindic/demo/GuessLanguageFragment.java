@@ -1,62 +1,61 @@
-package org.silpa.sdk.demo;
+package org.libindic.demo;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-
-import org.silpa.render.IndicEditText;
-import org.silpa.render.IndicTextView;
-import org.silpa.syllabifier.Syllabifier;
+import org.libindic.guesslanguage.GuessLanguage;
+import org.libindic.guesslanguage.LanguageInfo;
+import org.libindic.render.IndicEditText;
 
 /**
- * Created by sujith on 10/6/14.
+ * Created by sujith on 11/8/14.
  */
-public class SyllabifierFragment extends SherlockFragment {
+public class GuessLanguageFragment extends Fragment {
 
-    private Syllabifier syllabifier;
+    private GuessLanguage gl;
 
-    private IndicEditText edtSyllabifier;
-    private Button btSyllabify;
-    private IndicTextView tvSyllabifiedText;
+    private IndicEditText edtGuessLanguage;
+    private Button btGetLanguage;
+    private TextView tvLanguageInfoResult;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        View view = inflater.inflate(R.layout.syllabifier_fragment, container, false);
+        View view = inflater.inflate(R.layout.guess_language_fragment, container, false);
         initView(view);
+
         return view;
     }
 
     private void initView(View view) {
 
-        syllabifier = new Syllabifier();
+        gl = new GuessLanguage(getActivity());
 
-        edtSyllabifier = (IndicEditText)
-                view.findViewById(R.id.edtSyllabifier);
-        btSyllabify = (Button) view.findViewById(R.id.btSyllabify);
-        tvSyllabifiedText = (IndicTextView)
-                view.findViewById(R.id.tvSyllabifiedText);
+        edtGuessLanguage = (IndicEditText) view.findViewById(R.id.edtGuessLanguage);
+        btGetLanguage = (Button) view.findViewById(R.id.btGetLanguage);
+        tvLanguageInfoResult = (TextView) view.findViewById(R.id.tvLanguageInfoResult);
 
-        btSyllabify.setOnClickListener(new View.OnClickListener() {
+        btGetLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String text = edtSyllabifier.getText().toString();
+                String text = edtGuessLanguage.getText().toString();
 
                 if (text == null || text.length() == 0) {
                     showWarning();
                 }
 
-                tvSyllabifiedText.setText(syllabifier.syllabify(text));
+                LanguageInfo li = gl.guessLanguageInfo(text);
+                tvLanguageInfoResult.setText(li.toString());
             }
         });
     }
@@ -88,19 +87,19 @@ public class SyllabifierFragment extends SherlockFragment {
     }
 
     private void fillSampleData() {
-        if (edtSyllabifier != null) {
-            edtSyllabifier.setText(R.string.syllabifier_sample_1);
+        if (edtGuessLanguage != null) {
+            edtGuessLanguage.setText(R.string.guess_language_sample_1);
 
-            if (btSyllabify != null && tvSyllabifiedText != null) {
-                btSyllabify.performClick();
+            if (btGetLanguage != null && tvLanguageInfoResult != null) {
+                btGetLanguage.performClick();
             }
         }
     }
 
     private void clearFields() {
-        if (edtSyllabifier != null && tvSyllabifiedText != null) {
-            edtSyllabifier.setText("");
-            tvSyllabifiedText.setText("");
+        if (edtGuessLanguage != null && tvLanguageInfoResult != null) {
+            edtGuessLanguage.setText("");
+            tvLanguageInfoResult.setText("");
         }
     }
 }

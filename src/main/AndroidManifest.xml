@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.silpa.sdk.demo">
+    package="org.libindic.demo">
 
     <application
         android:allowBackup="true"
@@ -7,7 +7,7 @@
         android:icon="@drawable/ic_launcher"
         android:theme="@style/AppTheme">
 
-        <activity android:name="org.silpa.sdk.demo.MainActivity">
+        <activity android:name="org.libindic.demo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

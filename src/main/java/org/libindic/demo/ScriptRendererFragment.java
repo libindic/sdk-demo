@@ -1,9 +1,13 @@
-package org.silpa.sdk.demo;
+package org.libindic.demo;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -13,13 +17,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-
-import org.silpa.render.IndicEditText;
-import org.silpa.render.ScriptRenderer;
+import org.libindic.render.IndicEditText;
+import org.libindic.render.ScriptRenderer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +28,7 @@ import java.util.Map;
 /**
  * Created by sujith on 24/6/14.
  */
-public class ScriptRendererFragment extends SherlockFragment {
+public class ScriptRendererFragment extends Fragment {
 
     private ScriptRenderer scriptRenderer;
 

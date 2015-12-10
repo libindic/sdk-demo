@@ -1,7 +1,11 @@
-package org.silpa.sdk.demo;
+package org.libindic.demo;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -9,14 +13,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-
-import org.silpa.render.IndicEditText;
-import org.silpa.render.IndicTextView;
-import org.silpa.transliteration.Transliterator;
+import org.libindic.render.IndicEditText;
+import org.libindic.render.IndicTextView;
+import org.libindic.transliteration.Transliterator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,7 +25,7 @@ import java.util.Map;
 /**
  * Created by sujith on 9/7/14.
  */
-public class TransliteratorFragment extends SherlockFragment {
+public class TransliteratorFragment extends Fragment {
 
     private Transliterator transliterator;
     private IndicEditText edtTransliterator;

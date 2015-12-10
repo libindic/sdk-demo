@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="@string/syllabifier_header" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtSyllabifier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:text="@string/syllabifier_syllabified_text" />
 
-        <org.silpa.render.IndicTextView
+        <org.libindic.render.IndicTextView
             style="@style/RegularTextView"
             android:id="@+id/tvSyllabifiedText"
             android:layout_width="fill_parent"

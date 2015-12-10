@@ -1,26 +1,25 @@
-package org.silpa.sdk.demo;
+package org.libindic.demo;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-
-import org.silpa.render.IndicEditText;
-import org.silpa.render.IndicTextView;
-import org.silpa.soundex.Soundex;
+import org.libindic.render.IndicEditText;
+import org.libindic.render.IndicTextView;
+import org.libindic.soundex.Soundex;
 
 /**
  * Created by sujith on 10/6/14.
  */
-public class SoundexFragment extends SherlockFragment {
+public class SoundexFragment extends Fragment {
 
     private Soundex soundex;
 

@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ngram_header" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtNgram"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

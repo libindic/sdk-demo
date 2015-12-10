@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="@string/transliteration_header_transliterator_textview" />
 
-        <org.silpa.transliteration.TransliteratorTextView
+        <org.libindic.transliteration.TransliteratorTextView
             style="@style/SampleTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="@string/transliteration_header_transliterator_edittext" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtTransliterator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="@string/transliteration_textview_transliterated_text" />
 
-        <org.silpa.render.IndicTextView
+        <org.libindic.render.IndicTextView
             android:id="@+id/tvTransliteratorOutput"
             android:layout_margin="@dimen/layout_margin"
             android:layout_width="match_parent"
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:text="@string/transliteration_textview_self_transliteration" />
 
-        <org.silpa.transliteration.TransliteratorEditText
+        <org.libindic.transliteration.TransliteratorEditText
             android:id="@+id/edtTransliterator1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

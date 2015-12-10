@@ -1,7 +1,11 @@
-package org.silpa.sdk.demo;
+package org.libindic.demo;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -9,21 +13,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-
-import org.silpa.render.IndicEditText;
-import org.silpa.render.IndicTextView;
-import org.silpa.spellchecker.SpellChecker;
+import org.libindic.spellchecker.SpellChecker;
 
 import java.util.List;
 
 /**
  * Created by sujith on 17/8/14.
  */
-public class SpellCheckerFragment extends SherlockFragment {
+public class SpellCheckerFragment extends Fragment {
 
     private SpellChecker spellChecker;
 

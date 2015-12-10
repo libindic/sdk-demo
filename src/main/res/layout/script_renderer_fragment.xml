@@ -84,7 +84,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/hindi"
                     android:layout_weight="1"
@@ -112,7 +112,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/malayalam"
                     android:layout_weight="1"
@@ -140,7 +140,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/kannada"
                     android:layout_weight="1"
@@ -168,7 +168,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/tamil"
                     android:layout_weight="1"
@@ -196,7 +196,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/telugu"
                     android:layout_weight="1"
@@ -224,7 +224,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/gujarati"
                     android:layout_weight="1"
@@ -252,7 +252,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/punjabi"
                     android:layout_weight="1"
@@ -280,7 +280,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/oriya"
                     android:layout_weight="1"
@@ -308,7 +308,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
-                <org.silpa.render.IndicTextView
+                <org.libindic.render.IndicTextView
                     style="@style/TableRowTextView"
                     android:text="@string/bengali"
                     android:layout_weight="1"
@@ -332,7 +332,7 @@
             android:layout_marginTop="15dp"
             android:text="@string/script_render_header_edittext" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -340,7 +340,7 @@
             android:textColor="@color/blue"
             android:text="@string/script_render_text_view_sample_1" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -348,7 +348,7 @@
             android:textColor="@color/red"
             android:text="@string/script_render_text_view_sample_2" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -369,7 +369,7 @@
             android:layout_height="wrap_content"
             android:text="@string/script_renderer_render_description" />
 
-        <org.silpa.render.IndicEditText
+        <org.libindic.render.IndicEditText
             android:id="@+id/edtRenderInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
